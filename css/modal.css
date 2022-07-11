@@ -1,0 +1,106 @@
+/*modal*/
+
+@keyframes anima_modal {
+    from{
+        opacity:0;
+        transform:translate3d(0,-60px,0);
+    }
+    to{
+        opacity:1;
+        transform:translate3d(0,0,0);
+    }
+    }
+    h2{
+        color: #222122;
+    }
+    .mostrar .modal_conteudo{
+        animation: anima_modal .3s;
+    }
+    .modal_fundo_style{
+        width: 100vw;
+        height: 100vh;
+        background: #0e030eb8;
+        position: fixed;
+        top:0px;
+        left:0px;
+        z-index:2000;
+        display:none;
+        justify-content:center;
+        align-items: center;   
+    }
+    .modal_conteudo{
+        background: #ffff;
+        padding: 30px;
+        width: 60%;
+        max-width: 400px;
+        height: 400px;
+        min-width: 300px;
+        border-radius: 20px;
+        position: relative;
+    }
+    .modal_conteudo .mensagem{
+        width: 60%;
+        margin-left: 10%;
+        box-sizing: border-box;
+    }
+    .modal_conteudo input{
+        display: flex;
+        height: 30px;
+        width: 100%;
+        font-family: 'Roboto Condensed', sans-serif;
+        letter-spacing: 2px;
+        color: #7a677a;
+        background-color: transparent;
+        border: none;
+        border-bottom: solid 1px #943892b4;
+    }
+    .modal_conteudo .bt-2{
+        background: #943892b4;
+        color: var(--branco-padrão);
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 14px;
+        font-family: GeosansLight-Oblique;
+        transition: 1s all;
+        border-radius: 20px;
+        width: 200px;
+        padding-left: 60px;
+   }
+   .modal_conteudo .bt-2:hover{
+    background: var(--cinza-padrão);
+    transform: scale(1.1);
+}
+    input[type=file]{
+        margin-top: 5px;
+        transition: 1s all;
+        border: none;
+    }
+    input[type=file]:hover{
+        cursor: pointer;
+    }
+    .modal_conteudo label{
+        color:var(--preto-padrão);
+        width: 100%;
+    }
+    
+    .modal_fundo_style.mostrar{
+        display:flex;
+    }
+    
+    .fechar{
+        position: absolute;
+        top: 3px;
+        right: 2px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 4px;
+        background-color: transparent;
+        color: #5a5757c4;
+        font-family: cursive;
+        font-weight: 900;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    

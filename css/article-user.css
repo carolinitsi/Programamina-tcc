@@ -1,0 +1,83 @@
+article .lista_usuarias{
+    background-color: #ffff;
+    display: flex;
+    flex-wrap: wrap;
+    width: 240px;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    right:0px;
+    top:80px;
+}
+
+.lista_usuarias img{
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 0px; 
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    object-fit: cover;
+}
+
+article .usuaria{
+    background-color: #ffff;
+    display: flex;
+    flex-wrap: wrap;
+    width: 240px;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    left:0px;
+    top:50px;
+
+}
+
+.secaoPrincipal__infosUser{
+    display: flex;
+    flex-direction: column;
+}
+
+.secaoPrincipal__infosUser-image{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.secaoPrincipal__infosUser-image img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.secaoPrincipal__infosUser{
+    color: #7b387a;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 10px auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    overflow-wrap: break-word;  
+    word-wrap: break-word; 
+    word-break: break-word;
+}
+
+.nome{
+    font-weight:bold;
+    font-size: 18px;
+}
+
+.profissao{
+    font-size: 16px;
+    color: #aba4a4;
+    letter-spacing: 1px;
+}
+
+.competencias{
+    font-size: 14px;
+    color: #aba4a4;
+    font-weight: bold;
+    letter-spacing: 1px;
+}

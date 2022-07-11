@@ -1,0 +1,258 @@
+@import 'styleGuide.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Raleway:ital,wght@1,100&family=Roboto+Condensed:wght@300&family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,700&family=Open+Sans:ital,wght@1,300&family=Poiret+One&family=Raleway:ital,wght@1,100&family=Roboto+Condensed:wght@300&family=Zen+Kurenaido&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+@font-face{
+    font-family:kiona;
+    src:url('fontes/Kiona.ttf');
+}
+@font-face{
+    font-family:GeosansLight-Oblique;
+    src:url('fontes/GeosansLight-Oblique.ttf');
+}
+@font-face{
+    font-family:teste;
+    src:url('fontes/Fashion\ Fetish\ Small\ Caps.ttf');
+}
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; } 
+    }
+    @-moz-keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1; }
+    }
+    @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+    @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+html { 
+    scroll-behavior: smooth;
+}
+body{
+    margin-top:0px;
+    margin-left: 0px;
+    background-color: #f3f2ef;
+}
+h1{
+    
+    font-family: 'Bebas Neue', cursive; 
+    font-size: 100px;
+    letter-spacing: 4px;
+    color: #ffff;   
+}
+h1 span{
+    color: #a25fa2;
+    font-family: 'Shadows Into Light', cursive;
+}
+h2,h3{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--cinza-padrão);
+    text-align: center;
+}
+
+p{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.fadeIn {
+    -webkit-animation: fadeIn 3s ease-in-out;
+    -moz-animation: fadeIn 3s ease-in-out;
+    -o-animation: fadeIn 3s ease-in-out;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.menssagem{
+    color: red;
+    font-family: 'Roboto Condensed', sans-serif;      
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.esconde{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    display: none;
+}
+#sucesso{
+    color: #0cd40c;
+    font-weight: bold;
+    display:flex;
+    align-items: center;
+    margin-top: 10px;
+    font-family: 'Roboto Condensed';
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+#error{
+    color: #F22914;
+    font-weight: bold;
+    display:flex;
+    align-items: center;
+    margin-top: 10px;
+    font-family: 'Roboto Condensed';
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.wrapper{
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+/*BOTÕES----------------------------------------------------------------------*/
+.bt_padrao{
+    border-radius: 10px 20px 30px;
+    border: none;
+    padding: 5px;
+    background:var(--preto-padrão);
+    color: var(--branco-padrão);
+    width: 60px;
+    height: 30px;  
+    margin-top: 5%;
+    transition: 1s all;
+}
+.bt_padrao:hover{
+    background:var(--cinza-padrão);
+    cursor: pointer;
+}
+
+.bt_editar_perfil{
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    margin: 5px;
+}
+#bt_editar_perfil:hover{
+    width: 30px;
+    height: 30px;
+}
+.bt_home{
+    width: 20px;
+    height:20px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    filter: brightness(2);
+}
+.bt_home-link img{
+    width: 20px;
+    height: 20px;
+    opacity: 80%;
+}
+.bt_home-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+}
+.bt_sair{
+    background-color: transparent;
+    background-image: url("icones/login.png ");
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    filter: brightness(2);
+    opacity: 80%;
+}
+.bt_sair-text{
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;    font-size: 12px;
+    position: absolute;
+    top: 18px;
+    left: 1px;
+}
+
+.bts_post{
+    position: absolute;
+    right: 25px;
+}
+.bt_editar_post{
+    background-image: url("icones/editar.png ");    
+}
+.bt_editar_post:hover{
+    background-image: url("icones/editar-hover.png ");
+    cursor: pointer;
+}
+.bt_deletar_post{
+    background-image: url("icones/excluir.png ");
+}
+.bt_deletar_post:hover{
+    background-image: url("icones/excluir-hover.png ");
+    cursor: pointer;
+}
+.bt_padrao--grande{
+    margin-top: 2%;
+    height: 50px;
+    width: 100%;
+    border:none;
+    border-radius: 20px;
+    background:#7b387a;
+    color: var(--branco-padrão);
+    font-family:GeosansLight-Oblique;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 0;
+    transition: 1s all;
+    cursor: pointer;
+}
+.bt_padrao--grande:hover{
+    background: var(--cinza-padrão);
+}
+
+.secaoPrincipal{
+    width: 100%;
+    margin: 30px auto;
+    
+}
+.box_error{
+    display: flex;
+    flex-direction: column;
+}
+.box_error img{
+    width: 180px;
+    height: auto;
+    opacity: 11%;
+    margin: 80px auto 20px auto;
+}
+
+.box_error p{
+    font-size:20px;
+}
+
+@media(max-width:768px){
+    h1{
+        font-size: 60px;     
+    }
+}

@@ -1,0 +1,57 @@
+.barra_acessibilidade{
+    height: 30px;
+    background-color: #ffff;
+    border-radius:10px 0px 0px 10px;
+    position: fixed;
+    bottom: 5px;
+    z-index: 9999;
+    right: 0px;
+    width: 100px;
+    padding-top:9px;
+    border: solid 1px #ffff;
+}
+.barra_acessibilidade-itens{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.bt_darkmode{
+    background-color:transparent;
+    border:none;
+    background-image: url("../css/icones/dark-mode.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.bt_fontMaior{
+    background-color:transparent;
+    border:none;
+    background-image: url("../css/icones/font-maior.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.bt_fontMenor{
+    background-color:transparent;
+    border:none;
+    background-image: url("../css/icones/font-menor.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.bt_fontMenor:hover, .bt_fontMaior:hover, .bt_darkmode:hover{
+    opacity: 100%;
+}

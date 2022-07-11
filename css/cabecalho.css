@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  .header{
+      box-shadow: 0px 20px 29px #888888;
+      background: linear-gradient(68.15deg,#241355, #60103f 16.62%, #50076d , #262223 );
+      background-repeat: no-repeat;
+      width: 100vw;
+      height: 500px;
+      position: relative;
+      top: 40px;
+      z-index: 9;
+      opacity: 64%;
+  }
+
+  .header__container{
+      display: flex;
+      /* margin-top: 86px; */
+  }
+
+  .header__image{
+      width: 700px;
+      height: 400px;
+      /* transform: translateX(-50%); */
+      margin-top: 108px;
+      filter: drop-shadow(-1px 9px 23px #1f1d1d)saturate(80%)brightness(91%);
+      /* filter: saturate(80%); */
+      
+  }
+  .header__menu-buttons{
+    display: flex;
+  }
+
+  .header__conteudo{
+    display: flex;
+    flex-direction: column;
+    z-index: 9;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+}
+  
+  .header__menu{
+      display: flex;
+      list-style: none;
+      justify-content: end;
+      width: 100%;
+      top: 0;
+      position: fixed;
+      background-color: #fff;
+      z-index: 99;
+      box-shadow: -4px 6px 32px -1px #605d5d;
+  }
+  .header__menu-inicio{
+    background: linear-gradient(68.15deg,#241355, #60103f 16.62%, #50076d , #262223 ) !important;
+  }
+
+  .header__menu-item{
+      margin: 12px 60px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 16px;
+      color: #5c5b5b;
+      font-family: 'Roboto Condensed', sans-serif;      
+  }
+  .header__menu-item:hover{
+      font-weight: 800;
+  }
+
+  .header__menu-titulo{
+      width: 400px;
+      height: 60px;
+      display: block;
+  }
+
+.header__pesquisa{
+    margin-top: 60px;
+} 
+
+  .header__pesquisa p{
+      color: #fbfbfb;
+      font-family: 'Raleway', sans-serif;
+      font-size: 20px;
+      text-align: center;  
+      margin: 10px;     
+  }
+
+  .header__pesquisa button{
+      padding: 10px;
+      background: linear-gradient(68.15deg,#5e4a95, #943893   16.62%, #943893 , #5e4a95 );
+      border: transparent 2.5px solid;
+      border-radius: 25px;
+      color: white;
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      letter-spacing: 3px;
+      -webkit-box-reflect: below 5px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+      margin: 0 auto;
+      width: 300px;
+    }
+
+  .conteudo{
+      width: 80%;
+      margin: 100px auto;
+      font-family: 'Raleway', sans-serif;
+      color: rgba(0, 0, 0, 0.932);
+  }
+
+  .conteudo h1{
+      color: #50076d;
+      margin: 50px 0px;
+      padding: 5px;
+  }
+
+.pesquisa{
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+.box_pesquisa-input{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.pesquisa-input{
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+    background-color: #837e887d;
+
+    color: #fbfbfb;
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 0 10px; 
+}
+.pesquisa-input:active{
+    
+    background-color: #837e887d;
+
+}
+
+.pesquisa-input::placeholder{
+    color: #fbfbfbcc;
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 0 10px; 
+}
+
+.pesquisa-bt{
+    width: 20px;
+    height: 20px;
+    background-image: url("icones/lupa-pesquisa.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+
+    position: absolute;
+    right: 15px;
+}
+
+.pesquisa-bt:hover{
+    cursor: pointer;
+}
+
+.header__logado{
+    background: linear-gradient(68.15deg,#262529, #4f454f   16.62%, #514551, #3a363a );
+    height: 50px;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    z-index: 5;
+}
+
+.header__logado-conteudo{
+    display: flex;
+    align-items: center;
+    top:-3px;
+}
+

@@ -1,0 +1,124 @@
+/*PAGINA LOGIN*/
+.page-login{
+    background-image: url(../css/imagens/student-g99e409db8_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center; 
+}
+.background-effect{
+    background: linear-gradient(68.15deg,#241355, #60103f 16.62%, #50076d , #262223 );
+    width:100vw;
+    height: 100vh;
+    top: 0px;
+    z-index: 9;
+    opacity: 64%;
+    position: absolute;
+}
+
+.menssagem{
+    color: red;
+    font-family: 'Roboto Condensed', sans-serif;      
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.secao__form__login{
+    width: 100vw;
+    top: 27px;
+    position: absolute;
+    z-index: 9;
+}
+
+.container__form__login{
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 130px;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.container__form__cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container__form__cabecalho h1{
+    width: 60%;
+    font-size: 34px;
+    text-shadow: 2px 2px 8px #999999;
+}
+
+.container__form__arrow{
+    width: 50px;
+}
+
+.container__form__arrow:hover{
+    
+    filter: drop-shadow(16px 16px 20px rgb(255, 0, 221)) invert(50%);
+}
+
+.form__login{
+    display: flex;
+    flex-direction: column;
+}
+
+.form__login-input{
+    height: 50px;
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-weight: bold;
+    letter-spacing: 2px;  
+    color: #7a677a;   
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px #943892b4;
+    transition:all all 2s;
+}
+
+.form__login-input:hover{
+    border-bottom: solid 2px #943892b4;
+}
+
+.form__login-label{
+    color: #943892b4;
+    font-family: 'Roboto Condensed', sans-serif;      
+    margin: 10px 0;
+}
+
+.form__login-bt{
+    padding: 10px;
+    background: linear-gradient(68.15deg,#5e4a95, #943893   16.62%, #943893 , #5e4a95 );
+    border: transparent 2.5px solid;
+    border-radius: 25px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.form__login-bt:hover{
+    cursor: pointer;
+}
+
+.form__login-svg{
+    margin-top: 54vh;
+    overflow:hide;
+}
+
+
+@media(max-width:768px){
+    .container__form__login {
+        width: 90%;
+        max-width: 500px;
+        top: 90px;
+        padding: 30px;
+    }
+}
+

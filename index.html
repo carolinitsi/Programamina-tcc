@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>ProgramaMina</title>
+        <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css"/>
+
+        <link rel="stylesheet" type="text/css" href="css/base.css">
+        <link rel="stylesheet" type="text/css" href="css/modal.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo-posts.css">
+        <link rel="stylesheet" type="text/css" href="css/cabecalho.css">
+        <link rel="stylesheet" type="text/css" href="css/rodape.css">
+        <link rel="stylesheet" type="text/css" href="css/slider.css">
+        <link rel="stylesheet" type="text/css" href="css/responsivo-inicio.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="sortcut icon" type="image/x-icon" href="css/icones/pc.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Raleway:ital,wght@1,100&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+       
+    </head>
+
+    <body class="fadeIn" onload="slide1()" >
+        <header>
+            <ul class="header__menu wrapper">
+                <li class="header__menu-item" title="Home">Home</li>
+                <li class="header__menu-item" title="Quem sou eu?">Quem sou eu?</li>
+                <li class="header__menu-item" title="Contato">Contato</li>
+                <li class="header__menu-item" title="Login"><a href="../ProgramaMina-master/php/login.php"> Login </a></li>
+            </ul>
+            <div  class="header"></div>
+            <div class="header__conteudo">
+                                        
+                <div class="header__menu-titulo">
+                    <h1>Programa<span>Mina</span></h1>
+                </div>
+
+                <div class="header__pesquisa">
+                    <p>257 anos, não se depender de nós!</p>
+                    <button class="bt_chama_modal">Cadastre-se</button>
+                </div>
+
+            </div>
+            <div class="slider">
+                <div class="slider_header"><img  class="slider_header-img" src="css/imagens/computer-g6b51f598e_1920.jpg"></div>
+                <div class="slider_header"><img  class="slider_header-img" src="css/imagens/student-g0bf2bbc4d_1920.jpg"></div>
+                <div class="slider_header"><img  class="slider_header-img" src="css/imagens/student-g814c18c34_1920.jpg"></div>
+                <div class="slider_header"><img  class="slider_header-img" src="css/imagens/student-g99e409db8_1920.jpg"></div>
+            </div>
+
+          
+        </header> 
+       
+        
+        
+         
+    <section class="introducao wrapper" >
+    </section>
+        
+        <p class="copyright"> &copy; Copyright ProgramaMina 2021</p>
+    </footer>
+
+    <!------------------------------------- MODAL ------------------------------------------------------------>
+
+    <div id="modal_fundo" class="modal_fundo_style">
+        <div class="modal_conteudo">
+           <button class="fechar">X</button>
+            <form action="crud/logica_usuario.php" method="post" enctype="multipart/form-data"> 
+                <h2>Cadastrar:</h2>  
+                <label for="nome">Nome: </label>
+                <input type="text" required class="nome" id="nome" name="nome" placeholder="nome">
+                <label for="profissao">Profissão: </label>
+                <input type="text" required class="profissao" id="profissao" name="profissao" placeholder="profissao">
+                <label for="competencias">Competências: </label>
+                <input type="text" required class="competencias" id="competencias" name="competencias" placeholder="competencias">
+                <label for="email">Email: </label>
+                <input type="email" required class="email" id="email" name="email" placeholder="email">
+                <label for="senha">Senha: </label>
+                <input type="password" required minlength="4" class="senha"  id="senha" name="senha" placeholder="senha">
+                <input type="file" required  class="" id="file" name="file">
+                <input type="submit" class="bt-2" id="cadastrar" name="cadastrar" value="Cadastrar">           
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <script type="text/javascript" src="slick-1.8.1/slick/slick.js"></script>
+
+    <script>
+        $('.slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            fade: true,
+            cssEase: 'linear'
+        });
+    </script>
+    <script src="js/slider.js" ></script>
+    <script src="Js/modal.js"></script>
+
+</body>

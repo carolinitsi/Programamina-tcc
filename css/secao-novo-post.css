@@ -1,0 +1,25 @@
+.secaoPrincipal__post{
+    width: 60%;
+    margin:50px auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #ffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 20px 20px 50px 15px #e5e3e39f;
+}
+
+
+.secaoPrincipal__post-titulo{
+    padding: 10px;
+}
+
+.secaoPrincipal__post--post{
+    width: 100%;
+    height: 100px;
+    border-radius:20px;
+    border: solid 1px var(--cinza-padrão);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 20px;
+}

@@ -1,0 +1,27 @@
+.box_like{
+    display:none;
+    align-items:center;
+    background:#ffff;
+    margin: 20px;    
+}
+
+.span_like{
+    width:30px;
+    color: #a45fa2;
+    font-family: roboto;
+    text-decoration: underline #a45fa2 1px;
+    line-height:25px;
+    font-size: 14px;
+    text-align: center;
+    height:20px;
+}
+
+.bt_like {
+    background:transparent;
+    background-image:url("./icones/like.png");
+    background-size: cover;
+    border: none;
+    width: 20px;
+    height:20px;
+    cursor: pointer;
+}

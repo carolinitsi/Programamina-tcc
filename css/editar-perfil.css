@@ -1,0 +1,316 @@
+
+fieldset{
+    border:none;
+    display: flex;
+    border: none;
+    flex-direction: column;
+}
+form fieldset legend{
+    font-size: 16px;
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    padding: 20px 0;
+    position: relative;
+}
+
+.label_edita_file label{
+    font-size: 12px;
+    border-radius:0px;
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    padding: 20px 10px;
+    width: 200px;
+    background-color: #333;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+
+.box-editar-arrow{
+    width:50px;
+    width: 30px;
+    position: absolute;
+    left: 0px;
+    top: 13px;
+    filter: brightness(0.5);
+}
+.bt_editar-perfil{
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background: #504c50;
+    color: #fff;
+    transition: 1s all;
+    cursor: pointer;
+}
+.bt_editar-perfil:active{
+    background: #676667;
+
+}
+.box-editar-usuario{
+    width:900px;
+    display: flex;
+    justify-content: space-between;
+    background-color:#ffff;
+    padding-top: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 2.5%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: absolute;
+    top:150px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 20px 20px 50px 15px #e5e3e39f;
+}
+.box-editar-post{
+    width: 40%;
+    height: 60%;
+    margin-top: 5%;
+    margin-left: 30%;
+    background-color:#fff;
+    padding-top: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 2.5%;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.box-editar-post fieldset{
+    height: 100%;
+    border:none;
+
+}
+.box-editar-post fieldset label{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.box-editar-post fieldset textarea{
+    height: 60%;
+    border:none;
+    background-color: var(--branco-inpput);
+    font-family:GeosansLight-Oblique;
+    font-size: 16px;
+    padding: 5%;
+}
+
+.box-editar-post fieldset input , .principal-right .formulario input {
+    height: 30px;
+    border:none;
+    background-color: var(--branco-inpput);
+    font-family:GeosansLight-Oblique;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.box-editar-post fieldset input[type=submit]:hover{
+    background:var(--cinza-padrão);
+    cursor: pointer;
+}
+.imagem-perfil{
+    width:240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 20px solid #ffff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:-80px;
+
+}
+
+.box-editar-email input{
+    width: 300px;
+    height: 40px;
+    margin: 10px 0px;
+    font-size: 16px;
+    border-radius: 15px;
+    padding-left: 5px;
+    font-family: 'Roboto Condensed';
+    color: #aeaeae;
+    font-weight: bold;
+    /* background-color: #f1f6fb; */
+    background-color: aliceblue;
+
+
+}
+.box-editar-senha,.box-editar-usuario form label{
+    color: var(--preto-padrão);
+    font-weight: bold;
+    font-size: 14px;
+    font-family:GeosansLight-Oblique;
+}
+.box-editar-senha{
+    margin-top:50px;
+}
+.box-editar-senha-icon{
+    width:20px;
+    height:20px;
+    position:absolute;
+    right:-25px;
+}
+
+.box-editar-senha form input{
+    width: 300px;
+    height: 40px;
+    margin: 10px 0;
+    padding-left: 5px;
+    border-radius: 15px;
+    /* background-color: #f1f6fb; */
+    background-color: aliceblue;
+}
+.box-editar-senha form input::placeholder{
+    width: 300px;
+    font-size: 16px;
+    font-family: 'Roboto Condensed';
+    color: #aeaeae;
+    font-weight: bold;
+}
+.bt_secundario{
+    border-radius: 10px 20px 30px;
+    border: none;
+    padding: 5px;
+    background:#222122;
+    color: rgb(248, 234, 234);
+    width: 100px;
+    height: 30px;  
+    margin-top: 5%;
+    transition: 1s all;
+}
+.bt_secundario:hover{
+    background:var(--cinza-padrão);
+    cursor: pointer;
+}
+
+.input {
+    position: relative;
+}
+.input__label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
+      margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * .5);
+      white-space: nowrap;
+      transform: translate(0, 0);
+      transform-origin: 0 0;
+      background: transparent;
+      transition: transform 120ms ease-in;
+      font-weight: bold;
+      line-height: 1.2;
+      font-family: 'Roboto Condensed';
+    }
+
+
+    :root {
+      --color-light: white;
+      --color-dark: #212121;
+      --color-signal: #242320;
+      
+      --color-background: var(--color-light);
+      --color-text: var(--color-dark);
+      --color-accent: var(--color-signal);
+      
+      --size-bezel: .5rem;
+      --size-radius: 4px;
+      
+    }
+    
+    .input__field {
+        box-sizing: border-box;
+        display: block;
+        border: 3px solid currentColor;
+        padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+        color: currentColor;
+        background: transparent;
+        border-radius: var(--size-radius);
+    }
+    .input__label {
+        transform: translate(.25rem, -65%) scale(.8);
+        color: var(--color-accent);
+        
+      }
+    
+ 
+.box-editar-imagem{
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border-radius: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -80px;
+}
+.label_edita_file{
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background: #2a2a2bb8;
+    border-radius: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    border: 20px solid transparent;
+    cursor: pointer;
+    transition: all 1s;
+}
+.label_edita_file:hover{
+    opacity: 100;
+}
+.label_edita_file span{
+    color: #ffffffd4;
+    font-family: 'Roboto Condensed';
+    position: absolute;
+    left: 50%;
+    top: 145px;
+    transform: translateX(-50%);
+}
+
+.box-editar-file-icon {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    opacity: 0.5;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40px;
+    cursor: pointer;
+
+}
+.bt_salvar_foto{
+    display: none;
+    position: absolute;
+    top: 200px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background: #5ce779;
+    color: #fff;
+    cursor: pointer;
+    transition: all 1s;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bt_salvar_foto:hover{
+    background: #36a44e;
+}
+
+#bt_edita_file{
+    display: none;
+}
+
+#preview{
+    display: none;
+    border-radius: 100%;
+    object-fit: cover;
+    width: 240px;
+    height: 240px;
+    border: 20px solid #ffff;
+}
