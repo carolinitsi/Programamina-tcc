@@ -9,7 +9,7 @@
             <span class="secaoPrincipal__infosUser nome"><?php echo $usuario['nome']; ?></span>
             <span class="secaoPrincipal__infosUser profissao"><?php echo $usuario['profissao']; ?></span>
             <span class="secaoPrincipal__infosUser competencias"><?php echo $usuario['competencias']; ?></span>
-            <a  href="../crud/editar-perfil.php" title="Editar perfil" class="bt_editar_perfil" id="" name="editar" value="editar" alt="Editar"><img src="../css/icones/config.png" class="" width=""/></a>
+            <a  href="../crud/editar-perfil.php" title="Editar perfil" class="bt_editar_perfil" id="" name="editar" value="editar" alt="Editar"><img src="../css/icones/config.png" class="" width=""/> Editar perfil</a>
         </div>
 <?php 
     } 

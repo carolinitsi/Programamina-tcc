@@ -69,9 +69,11 @@ if(isset($_POST['editar_post'])){
     $assunto  = $_POST['assunto'];
     $post     = $_POST['post'];
     $data     = date("d/m/Y h:i:s");
+    $imagem   =  $_POST['file'];
+    $file     = upload($imagem);
   
-    $query    = "UPDATE posts SET  post = ?, assunto = ? WHERE id_posts = $id_post ";
-    $array    = array($post,$assunto);
+    $query    = "UPDATE posts SET  post = ?, assunto = ?, imagem_post = ? WHERE id_posts = $id_post ";
+    $array    = array($post,$assunto,$file);
     $usuario  = fazConsulta($query,'query',$array);
     if($usuario)
     {
@@ -91,10 +93,13 @@ if(isset($_POST['editar_post'])){
     $assunto    = $_POST['assunto'];
     $post       = $_POST['post'];
     $id_usuario = $_SESSION['id'];
+    $imagem = $_SESSION['file'];
     $data       = date("d/m/Y h:i");
     
-    $query = "insert into posts (id_usuario, post,assunto,data_post) values (?,?,?,?)";
-    $array = array($id_usuario,$post, $assunto,$data);
+    $file  = upload($imagem);
+    
+    $query = "insert into posts (id_usuario, post,assunto,data_post,imagem_post) values (?,?,?,?,?)";
+    $array = array($id_usuario,$post, $assunto,$data,$file);
     $usuario=fazConsulta($query,'query',$array);
     if($usuario)
     {
@@ -143,21 +148,30 @@ if(isset($_REQUEST['cadastrar'])){
     $nome = $_REQUEST['nome']; 
     $profissao = $_REQUEST['profissao'];
     $competencias = $_REQUEST['competencias'];
-    
-
     $file  = upload($teste);
-    
-    $query = "insert into usuarios (email, senha,imagem,nome,profissao,competencias) values (?,?,?,?,?,?)";
-    $array = array($email, $senhaEncriptada,$file,$nome, $profissao, $competencias);
-    $usuario=fazConsulta($query,'query',$array);
-    if($usuario)
-    {
-        header('location:../cadastro_concluido.html');
-
+ 
+    $query = "SELECT * FROM posts , usuarios where posts.id_usuario = usuarios.id_usuarios ORDER BY posts.id_posts desc";
+    $usuarios = fazConsulta($query,'fetchAll');
+    foreach($usuarios as $usuario){
+        if($email == $usuario['email']){
+            $_SESSION['msg']="Ops! Esse endereço de email já foi cadastrado!";
+            header('location:../error.html');
+            $existe = true;
+        } 
     }
-    else
-    {
-        $_SESSION['msg']="Erro ao inserir";
+    if($existe != true){
+        $query = "insert into usuarios (email, senha,imagem,nome,profissao,competencias) values (?,?,?,?,?,?)";
+        $array = array($email, $senhaEncriptada,$file,$nome, $profissao, $competencias);
+        $usuario=fazConsulta($query,'query',$array);
+        if($usuario)
+        {
+            header('location:../cadastro_concluido.html');
+
+        }
+        else
+        {
+            $_SESSION['msg']="Erro ao inserir";
+        }
     }
 }
 

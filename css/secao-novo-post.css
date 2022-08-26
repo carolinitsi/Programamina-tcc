@@ -9,7 +9,39 @@
     padding: 20px;
     box-shadow: 20px 20px 50px 15px #e5e3e39f;
 }
+.bt__file{
+    display: flex;
+    align-items: center;
+    font-size:16px;
+    width: 70px;
+    justify-content: space-evenly;
+    padding:2px;
+    cursor: pointer;
+    margin:5px;
+}
+.bt__file:hover{
+    background-color: rgb(232, 228, 228);
+    border-radius: 10px;
+}
+.input_file_post{
+    display:none;
+}
+.input_file_post-icon{
+    width:30px;
+    height:30px;
+    position: relative;
+}
 
+.secaoPrincipal__post #preview{
+    width:40px;
+    height:40px;
+    background-size: cover;
+    border-radius: 0px;
+    border: none;
+    position: absolute;
+    margin-top:8px;
+    margin-left:140px;
+}
 
 .secaoPrincipal__post-titulo{
     padding: 10px;

@@ -1,5 +1,5 @@
 <?php
-
+require('../vendor/autoload.php');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 require_once "PHPMailer/src/PHPMailer.php";
@@ -7,7 +7,7 @@ require_once "PHPMailer/src/SMTP.php";
 
 function fazconexao(){
     //charset=utf8; previne SQL INJECTION!!!!
-    $stringDeConexao = 'mysql:host=localhost;charset=utf8;dbname=programamina;';
+    $stringDeConexao = 'mysql:host=localhost;charset=utf8;dbname=banco_programamina;';
     $usuario = 'root';
     $senha = '';
     //conexao via PDO
@@ -204,7 +204,7 @@ function upload (){
            $imagem =  $_FILES["file"]["name"] . "." . $tipoArquivoImagem;
            return $imagem;
        } else {
-           echo "Ocorreu um erro enviando seu arquivo.<br>";
+        //    echo "Ocorreu um erro enviando seu arquivo.<br>";
        }
       
       }

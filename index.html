@@ -28,7 +28,6 @@
         <header>
             <ul class="header__menu wrapper">
                 <li class="header__menu-item" title="Home">Home</li>
-                <li class="header__menu-item" title="Quem sou eu?">Quem sou eu?</li>
                 <li class="header__menu-item" title="Contato">Contato</li>
                 <li class="header__menu-item" title="Login"><a href="../ProgramaMina-master/php/login.php"> Login </a></li>
             </ul>
@@ -38,9 +37,7 @@
                 <div class="header__menu-titulo">
                     <h1>Programa<span>Mina</span></h1>
                 </div>
-
                 <div class="header__pesquisa">
-                    <p>257 anos, não se depender de nós!</p>
                     <button class="bt_chama_modal">Cadastre-se</button>
                 </div>
 
@@ -58,10 +55,37 @@
         
         
          
-    <section class="introducao wrapper" >
+    <section class="introducao">
+        <p>Visto que existem diversas plataformas para auxiliar na conexão e na introdução nas comunidades de TI, foi observado que comumente as mulheres apresentam insatisfação com a falta de acolhimento oferecida pela área após a sua inserção. A predominância masculina nas comunidades e instituições de ensino também é um agravante da desigualdade de gênero no mercado de trabalho, fazendo com que mulheres não se sintam estimuladas a persistir nas carreiras almejadas. 	Logo, viu-se necessária a criação do sistema Programamina, que tem por objetivo oferecer uma rede de apoio às mulheres da área de TI, uma rede social onde elas possam trocar conhecimento e respaldo, fortalecendo a comunidade feminina na área de tecnologia, através de publicações e levantamento de dúvidas apresentados pelas usuárias.</p>
     </section>
+    <section class="sobre">
+        <div class="sobre_texto"> <p>Visto que existem diversas plataformas para auxiliar na conexão e na introdução nas comunidades de TI, foi observado que comumente as mulheres apresentam insatisfação com a falta de acolhimento oferecida pela área após a sua inserção. A predominância masculina nas comunidades e instituições de ensino também é um agravante da desigualdade de gênero no mercado de trabalho, fazendo com que mulheres não se sintam estimuladas a persistir nas carreiras almejadas. 	Logo, viu-se necessária a criação do sistema Programamina, que tem por objetivo oferecer uma rede de apoio às mulheres da área de TI, uma rede social onde elas possam trocar conhecimento e respaldo.</p></div>
+        <div class="sobre_img">
+            <img src="css/imagens/woman-gd417a8ba3_1920.jpg">
+            <div class="sobre_color"></div>
+        </div>
+    </section>
+    <section >
+        <ul class="topicos">
+            <li class="topicos_item"><img src="css/imagens/slider1.jpg"><p>Encontre mulheres da área de TI e faça novas amizades!</p></li>
+            <li class="topicos_item"><img src="css/imagens/slider2.jpg"><p>Faça publicações e tire suas dúvidas em uma rede social dedicada para mulheres!</p></li>
+            <li class="topicos_item"><img src="css/imagens/slider3.jpg"><p>Faça parte de uma comunidade disposta a alavancar sua carreira!</p></li>
+        </ul>
+    </section>
+
+    <footer class="rodape">
+        <!-- <div class="rodape__mensagem" id="secao-contato">
+            <form action="crud/logica_usuario.php" method="post"> 
+                <h2>Contate-nos:</h2>
+                <label for="email_remetente">Email: </label>
+                <input class="rodade__email" type="text" name="email_remetente" id="email_remetente" placeholder="    seuemail@gmail.com">
+                <label for="mensagem">Mensagem: </label>
+                <textarea class="rodape__mensagem" type="text" name="mensagem" id="mensagem" placeholder="   Insira sua mensagem"></textarea></br>
+                <input class="bt_padrao--grande" type="submit" id='enviar' name='enviar' value="Enviar">           
+            </form>
+        </div>   -->
         
-        <p class="copyright"> &copy; Copyright ProgramaMina 2021</p>
+        <p class="copyright"> &copy; Copyright ProgramaMina 2022</p>
     </footer>
 
     <!------------------------------------- MODAL ------------------------------------------------------------>
@@ -95,7 +119,7 @@
 
     <script>
         $('.slider').slick({
-            dots: true,
+            dots: false,
             infinite: true,
             speed: 300,
             autoplay: true,

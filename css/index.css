@@ -8,47 +8,93 @@ h2{
     width: 100%;
     height: 500px;
     margin:0 auto;
-    border-radius: 0 0 20% 20%;
+    background-color:#ffff;
     box-sizing: border-box;
+    padding:150px 150px;
 
 }
-.introducao__titulo{
-    font-family: 'Montserrat', sans-serif;
-    color:var(--branco-padrão) ;
+.sobre{
+    width:100%;
+    height:400px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: -4px 6px 32px -1px #605d5d;
 }
-
-.introducao__texto{
-    width: 80%;
-    margin-left: 10%;
-    color:#3b3939;
-    font-family: 'Montserrat', sans-serif;
-    font: 18px;
-    letter-spacing: 2px;
+.sobre_texto{
+    width:50%;
+    background-color:#a25fa2;
 }
-.convite{
+.sobre_texto p{
+    padding:50px;
+    color:#ffff;
+}
+.sobre_color{
+    background: linear-gradient(68.15deg,#241355, #60103f 16.62%, #50076d , #262223 );
+    opacity: 64%;
+    width:100%;
+    height:400px;
+}
+.sobre_img{
+    width:50%;
+    height:400px;
+    position: relative;
+}
+.sobre_img img{
     width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
 }
-.convite__titulo{
-    color: var(--vermelho-padrão);
-    margin: 50px;
+.topicos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding:50px;
+    height:400px;
+    align-items: center
 }
-.convite__link{
-    width: 20%;
-    margin-left: 40%;
-    border:none;
-    border-radius: 20px;
-    background:var(--vermelho-padrão);
-    color: var( --branco-padrão);
-    font-family:GeosansLight-Oblique;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 20px 80px;
-    transition: 1s all;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
+.topicos_item{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items:center
 }
-.convite__link:hover{
-    background: var(--cinza-padrão);
-    transform: scale(1.1);
+.topicos_item img{
+    width: 100%;  
+    height: 150px;
+}
+@media (min-width: 1200px){
+    .topicos_item{
+        width: 250px;
+        height: 150px;
+    }
+}
+@media (max-width: 768px){
+    .introducao{
+        height:auto;
+        padding:100px 30px;
+    }
+    .sobre{
+        width:100%;
+        height:auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .sobre_texto{
+        width:100%;
+    }
+    .sobre_texto p{
+        padding:50px;
+    }
+    .sobre_img{
+        width:100%;
+    }
+    .topicos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height:auto;
+    }
+    
 }

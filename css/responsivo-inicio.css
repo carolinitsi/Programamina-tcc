@@ -1,41 +1,18 @@
 /**/
-@media only screen and (max-device-width: 768px) {
+@media (max-device-width: 768px) {
     main{
         margin-left: auto;
         margin-right: auto;
     }
     h1{
-        font-size: 90px;
+        font-size: 60px;
     }
     .header{
         display: flex;
         padding-right: 10%;
         padding-left: 10%;
     }
-    .principalRight{
-        opacity: 15%;
-    }
-    .principalLeft{
-        position: absolute;
-        width: 80%;
-    }
-    .principalLeft__conteudo{
-        width: 100%;
-        float: none;
-        margin-top: 10%;
-        align-items: center;
-    }
-    .principalLeft__conteudo--input{
-        background:var(--input-mobile);
-    }
-    .principalLeft__conteudo form{
-        width: 80%;
-    }
-    .principalLeft__conteudo--subtitulo{
-        font-size: 30px;
-        font-weight: bold;
-        margin-left: 0px;
-    }
+
     
     .secaoPrincipal__post{
         width: 100%;
@@ -44,7 +21,7 @@
         flex-direction: column;
     }
     .boxpostIndividual{
-        width: 90%;
+        width: 100%;
         padding: 5%;
         height: auto;
     }
@@ -65,7 +42,11 @@
         width: 100%;
         margin-left: 0px;
     }
-    .lista_usuarias{
-        display: none;
+
+    div .header__logado-conteudo .wrapper{
+        display: flex !important;
+        flex-direction: column !important;
+        background-color:red;
     }
+   
 }

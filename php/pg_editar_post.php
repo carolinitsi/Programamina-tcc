@@ -15,9 +15,11 @@
 
 <body class="fadeIn">
     <section class="conteudoEditar">
-        <form class="conteudoEditar_form" action="../crud/logica_usuario.php" method="POST">
+        <form class="conteudoEditar_form" action="../crud/logica_usuario.php" method="POST" enctype="multipart/form-data">
                 <legend class="esconde">Editar post</legend>
                 <p class="esconde">ID:<input type="text" class="" name="id_post" value="<?php echo $usuario['id_posts']; ?>"></p>
+                <img src="../crud/imagens/<?php echo $usuario['imagem_post']; ?>"/>
+                <input type="file" required  class="" id="file" name="file">
                 <label for="caixa_assunto">Assunto:<input type="text" class="conteudoEditar_assunto" id="caixa_assunto" name="assunto" value="<?php echo $usuario['assunto']; ?>"></p>
                 <textarea type="text" class="conteudoEditar_post" rows='25' cols='100' name="post"  value=""> <?php echo $usuario['post']; ?> </textarea>
                 <input type="submit" class="bt_padrao--grande" name="editar_post" value="Salvar">

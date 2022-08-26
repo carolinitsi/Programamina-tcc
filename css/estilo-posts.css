@@ -83,6 +83,11 @@
 .boxpostIndividual-interacao{
 
 }
+.boxpostIndividual__cabecalho--imagem{
+    width: 100%;
+    height: auto;
+    margin-bottom:40px;
+}
 
 .secaoPrincipal__post--assunto{
     border-radius: 10px 20px 30px;
@@ -151,6 +156,9 @@
     width: 20px;
     cursor: pointer;
     border-radius: 100%;
+    position: absolute;
+    top: 5px;
+    right: 50px;
 }
 .bt-comentar:hover{
     background-image: url("icones/comentar.png");

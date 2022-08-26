@@ -10,14 +10,63 @@ article .lista_usuarias{
     top:80px;
 }
 
+.infos_users{
+    display: none;
+}
+.infos_users_show{
+    display: flex;
+    justify-content: space-around;
+    height:100px;
+    font-family:'Roboto Condensed', sans-serif;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    transition: all 2s;
+    flex-direction: column;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.infos_users_show li{
+    background-color: rgb(255 252 252 / 79%);
+    border: 1px solid #e5dfdfcf;
+    padding: 10px;
+    display: flex;
+    align-items: center
+}
+.infos_users_show li:first-child{
+    border-radius: 20px 20px 0px 0px;
+}
+.infos_users_show li:last-child{
+    border-radius: 0px 0px 20px 20px;
+}
+.infos_users_show li img{
+    width:20px;
+    height: 20px;
+    box-shadow: none;
+    border:none;
+    filter: brightness(0.5);
+}
+.infos_users_show li img:hover{
+   border: none;
+   cursor:inherit;
+}
+
 .lista_usuarias img{
     width: 60px;
     height: 60px;
-    padding: 5px;
-    border-radius: 0px; 
+    margin: 5px;
+    border-radius: 100%; 
     margin-left: 2.5px;
     margin-right: 2.5px;
     object-fit: cover;
+    box-shadow: 1px 0.5px 2px 2px #e9e5e5;
+    position: relative;
+    cursor: pointer;
+    border:solid 2px transparent;
+}
+
+.lista_usuarias img:hover{
+    border:solid 2px rgb(75, 71, 71);
 }
 
 article .usuaria{
@@ -28,9 +77,8 @@ article .usuaria{
     padding: 20px;
     border-radius: 20px;
     position: absolute;
-    left:0px;
+    left:0px; 
     top:50px;
-
 }
 
 .secaoPrincipal__infosUser{
@@ -80,4 +128,100 @@ article .usuaria{
     color: #aba4a4;
     font-weight: bold;
     letter-spacing: 1px;
+}
+.modal_perfil{
+    display: none;
+}
+.usuaria_close{
+    display: none;
+}
+.modal_users{
+    display: none;
+}
+.users_close{
+    display: none;
+}
+
+@media (max-device-width: 768px){
+    .modal_perfil{
+        display: block;
+    }
+    .modal_users{
+        display: block;
+    }
+    .usuaria_close{
+        display: block;
+        background-color: transparent;
+        background-image: url("../css/icones/close.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: none;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        width: 50px;
+        height: 50px;
+    }
+    .usuaria {
+        width: 100vw !important;
+        height: 100vh !important;
+        z-index: 9 !important;
+        top: -36px !important;
+        left: -1105px !important;
+        transition: all 0.5s ease-in-out !important;
+    }
+    .open_modal{
+        left:-100px !important;
+    }
+    .secaoPrincipal__infosUser-image{
+        width: 450px;
+        height: 450px;
+        margin: 100px auto;
+    }
+    .nome {
+        font-size: 70px;
+    }
+    .profissao {
+        font-size: 50px;
+    }
+    .competencias {
+        font-size: 45px;
+    }
+    .bt_editar_perfil{
+        width: 430px;
+        height: 100px;
+        font-size: 45px;
+    }
+    .bt_editar_perfil img{
+        width: 50px;
+        height: 50px;
+    }
+    .lista_usuarias{
+        display:none !important;
+        background-color:#100e0ee3 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        position: absolute !important;
+        z-index: 9999 !important;
+        left: -100px !important;
+        top: 0px !important;
+        border-radius: 0 !important;
+        justify-content:space-around;
+        padding: 100px 20px 0px 20px !important;
+        overflow: scroll;
+    }
+    .lista_usuarias div{
+        width: 160px !important;
+        height: 160px !important;
+        margin: 25px;
+    }
+    .lista_usuarias div img{
+        width: 160px !important;
+        height: 160px !important;
+    }
+    .open_modal_users{
+        display: flex !important;
+    }
+   
+
 }

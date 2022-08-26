@@ -69,8 +69,9 @@
             
         </section>
             <form class="box-editar-imagem"action="logica_usuario.php" method="post" enctype="multipart/form-data">
-                    <label class="label_edita_file" for="bt_edita_file"><img class="box-editar-file-icon" src="../css/icones/editar-imagem.png">                    <span class="">Editar foto</span>
-</label>
+                    <label class="label_edita_file" for="bt_edita_file"><img class="box-editar-file-icon" src="../css/icones/editar-imagem.png">                 
+                        <span class="">Editar foto</span>
+                    </label>
                     <input type="file"   id="bt_edita_file" name="file" value="<?php echo $usuario['imagem']; ?>" onchange="previewimage()">
                     <img id="preview"/>
                     <button class="bt_salvar_foto" type="submit" name="editar_foto_perfil" value="<?php echo $usuario['id_usuarios'];?>"> Salvar </button>

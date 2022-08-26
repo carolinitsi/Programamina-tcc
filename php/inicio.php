@@ -9,34 +9,42 @@
     <head>
         <title>ProgramaMina</title>
     </head>
+    
     <body class="">
+        
         <main  id="modal-edicao" class="wrapper">
                 
             <section id="secaoPrincipal" class="secaoPrincipal">
                 <article style="left:0px; position:absolute;">
                     <div class="usuaria">
+                        <button class="usuaria_close" onclick="OpenModalPerfil()"></button>
                         <?php include_once("user.php");?>  
                     </div>
                 </article>
                 <article>
                     <div class="lista_usuarias">
-                        <h2>Conheça algumas usuárias</h2>
+                        <button class="usuaria_close" onclick="OpenModalUsers()"></button>
                         <?php include_once("users.php");?>  
                     </div>
                 </article>
 
                 <div class="secaoPrincipal__post">
-                        <form action="../crud/logica_usuario.php" method="POST">
-                        <h2 class="secaoPrincipal__post-titulo">Compartilhe uma ideia, dica ou dúvida...</h2>
-
+                        <form action="../crud/logica_usuario.php" method="POST" enctype="multipart/form-data">
+                            <h2 class="secaoPrincipal__post-titulo">Faça uma publicação:</h2>
                             <label for="assunto">Assunto: </label><input id="assunto" type="text" required class="secaoPrincipal__post--assunto" name="assunto" placeholder=" Palavra chave" >
                             <textarea type="text" class="secaoPrincipal__post--post" name="post"placeholder=""></textarea>
+                            <label class="bt__file" for="bt__file"><img class="input_file_post-icon" src="../css/icones/file.png">                 
+                                <span class="">Foto</span>
+                                <img id="preview"/>
+                            </label>
+                            <input type="file"  class="input_file_post" id="bt__file" name="file" onchange="previewimagePost()">
                             <input type="submit" class="bt_padrao--grande" name="postar" value="Postar">
                         </form>
                 </div>
                 <?php include_once("lista_posts.php");?>
             </section>
         </main> 
+        
 
         <footer class="rodape">
             <!-- <div class="rodape__mensagem" id="secao-contato">
@@ -59,6 +67,7 @@
         <script src="ajax.js"></script>
         <script src="arquivo.js"></script>
         <script src="../Js/modal.js"></script>
+        <script src="../Js/openModalPerfil.js"></script>
 
     </body>
 </html>
