@@ -1,0 +1,8 @@
+div .modal_edit_post{
+    width: 600px;
+    background-color: red;
+}
+
+.modal_edit_post .conteudoEditar_post{
+    width: 400px;
+}

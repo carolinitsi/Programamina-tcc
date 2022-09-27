@@ -18,9 +18,9 @@ $(document).ready(function(){
 
 	function lista(){
 		$.ajax({
-			url:"sys/envia.php",
+			url:"../php/chat_mensagens.php",
 			success: function(textStatus){
-				$("#lista").html(textStatus); //Mostra o resultado da página lista.php
+				$("#batepapo_chat").html(textStatus); //Mostra o resultado da página lista.php
 			}
 		})
 		timerI = setTimeout("lista()", 3000); //Tempo de espera para atualizar novamente

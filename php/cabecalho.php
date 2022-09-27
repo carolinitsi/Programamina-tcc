@@ -1,7 +1,7 @@
 <?php 
     if(!$_SESSION['logado'])
     {
-	header('location:index.html');
+	    header('location:index.html');
     }
 
     ini_set('display_errors', 0 );
@@ -15,10 +15,15 @@
 <link rel="stylesheet" type="text/css" href="../css/base.css">
 <link rel="stylesheet" type="text/css" href="../css/cabecalho.css">
 <link rel="stylesheet" type="text/css" href="../css/editar-perfil.css">
+<link rel="stylesheet" type="text/css" href="../css/editar-post.css">
 <link rel="stylesheet" type="text/css" href="../css/responsivo-editPerfil.css">
 <link rel="stylesheet" type="text/css" href="../css/like.css">
 <link rel="stylesheet" type="text/css" href="../css/darkmode.css">
 <link rel="stylesheet" type="text/css" href="../css/barra-acessibilidade.css">
+<link rel="stylesheet" type="text/css" href="../css/modal-edit-post.css">
+<link rel="stylesheet" type="text/css" href="../css/chat.css">
+
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -27,6 +32,13 @@
 <script src="../js/input.js"></script>
 <script src="../js/previewimage.js"></script>
 <script src="../js/darkmode.js"></script>
+<script src="../js/online.js"></script>
+<script src="../js/chat.js"></script>
+<script src="../Js/openModalPerfil.js"></script>
+<script src="../Js/atualizaScrollChat.js"></script>
+
+
+
 
 
 <link rel="stylesheet" type="text/css" href="../css/estilo-posts.css">

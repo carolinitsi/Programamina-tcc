@@ -14,6 +14,9 @@
                     <li><img src="../css/icones/menu-perfil.png"/><strong><?php echo $usuario['nome'];?></strong></li>
                     <li><?php echo $usuario['profissao']; ?></li>
                     <li><img src="../css/icones/competencias.png"/><?php echo $usuario['competencias'];?></li>
+                    <!-- <li><button onclick ="abreChat(<?php echo $usuario['id_usuarios']; ?>)">Mensagem</button></li> -->
+                    <li><form method="get" action="chat.php"><button name="id" value="<?php echo $usuario['id_usuarios']; ?>">Enviar mensagem</button></form></li>
+
                 </div>
             </div>
         <?php

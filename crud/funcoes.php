@@ -1,9 +1,9 @@
 <?php
-require('../vendor/autoload.php');
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-require_once "PHPMailer/src/PHPMailer.php";
-require_once "PHPMailer/src/SMTP.php";
+// require('../vendor/autoload.php');
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\SMTP;
+// require_once "PHPMailer/src/PHPMailer.php";
+// require_once "PHPMailer/src/SMTP.php";
 
 function fazconexao(){
     //charset=utf8; previne SQL INJECTION!!!!

@@ -3,6 +3,9 @@
     session_start(); 
 
 ?>
+<heade>
+    <meta name="viewport" content="width=device-width">
+</heade>
 <header class="header__logado">
     <div class="header__logado-conteudo wrapper">
         <div class="box_pesquisa-input">

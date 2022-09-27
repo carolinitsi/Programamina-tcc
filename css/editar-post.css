@@ -1,6 +1,23 @@
 /*PG EDITAR POST*/
 .conteudoEditar{
-    padding:5% 20%;
+    margin: 100px auto;
+    width: 600px;
+    border-radius:20px;
+    background-color: #ffff;
+    padding:30px;
+}
+.edit_post-user{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+}
+.edit_post-user-nome{
+    margin-left: 10px;
+}
+.edit_post-user img{
+    width: 50px;
+    border-radius: 100%;
 }
 .conteudoEditar_form{
     margin: auto;
@@ -20,6 +37,7 @@
 }
 .conteudoEditar_assunto{
     height: 30px;
+    margin:10px 0;
 }
 
 div .imagem-pg-edita-post{

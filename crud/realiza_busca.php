@@ -7,7 +7,7 @@
             session_start();
             #PESQUISAR
                 $pesquisa  =  $_GET['pesquisa'];
-                $query = "SELECT * FROM posts , usuarios where posts.id_usuario = usuarios.id_usuarios and posts.assunto like '%$pesquisa%'";
+                $query = "SELECT * FROM posts , usuarios where posts.id_usuario = usuarios.id_usuarios and posts.post like '%$pesquisa%'";
                 $usuarios = fazConsulta($query,'fetchAll');
                 foreach($usuarios as $usuario){          
                 ?>  
@@ -20,14 +20,15 @@
                         </div>
                     </div>    
                     <div class="boxpostIndividual-conteudo"> 
-                        <h3 class="boxpostIndividual__cabecalho--titulo"><?php echo $usuario['assunto']; ?></h3> 
+                    <?php if(isset($usuario['imagem_post'])){?>
+                        <img class="boxpostIndividual__cabecalho--imagem" src="../crud/imagens/<?php echo $usuario['imagem_post']; ?>"/>
+                        <?php } ?>  
                         <p class="p_post"><?php echo $usuario['post']; ?></p>
-                        <form action="crud/logica_usuario.php" method="post">
+                        <form action="../crud/logica_usuario.php" method="post">
                             <input class="input_comentario" type="text" name="comentario" required value="" placeholder="   Adicione um comentario..." ><button class="bt-comentar" type="submit" name="comentar" value="<?php echo $usuario['id_posts'];?>"> </button>  
                         </form>   
                         <button class="bt_comentarios" id="bt_exibe_comentarios" name="" onclick="carregar_comentarios(<?php echo $usuario['id_posts']; ?>);" value="<?php echo $usuario['id_posts']; ?>">Ver comentários</button>
                         <div class="box-comentarios" id="exibe_comentarios<?php echo $usuario['id_posts']; ?>"> </div>
-                        <button class="bt_esconde_comentarios" name="" onclick="fechar_comentarios(<?php echo $usuario['id_posts']; ?>);" value="<?php echo $usuario['id_posts']; ?>">Ver menos</button>
                     </div>
                 </div>
                                                             

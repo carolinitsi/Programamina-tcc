@@ -26,10 +26,9 @@
         <link rel="sortcut icon" type="image/x-icon" href="css/icones/pc.png">
         <title>ProgramaMina | Login</title>
     </head>
-    <body class="fadeIn">
+    <body class="">
         <ul class="header__menu wrapper">
                 <li class="header__menu-item">Home</li>
-                <li class="header__menu-item">Quem sou eu?</li>
                 <li class="header__menu-item">Contato</li>
                 <li class="header__menu-item"><a href="php/login.php"> Login </a></li>
         </ul>

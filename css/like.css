@@ -1,5 +1,5 @@
 .box_like{
-    display:none;
+    display:block;
     align-items:center;
     background:#ffff;
     margin: 20px;    

@@ -21,11 +21,21 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Raleway:ital,wght@1,100&family=Zen+Kurenaido&display=swap" rel="stylesheet">
-       
+       <style>
+        /* input:invalid {
+            border-bottom: 2px solid rgba(255, 0, 0, 0.021);
+        }
+        input:focus {
+            border-bottom: 2px solid #a25fa2;
+        }
+        input:valid {
+            border-bottom: 2px solid #1abc9c;
+        } */
+       </style>
     </head>
 
     <body class="fadeIn" onload="slide1()" >
-        <header>
+    <header>
             <ul class="header__menu wrapper">
                 <li class="header__menu-item" title="Home">Home</li>
                 <li class="header__menu-item" title="Contato">Contato</li>
@@ -34,12 +44,12 @@
             <div  class="header"></div>
             <div class="header__conteudo">
                                         
-                <div class="header__menu-titulo">
-                    <h1>Programa<span>Mina</span></h1>
-                </div>
-                <div class="header__pesquisa">
-                    <button class="bt_chama_modal">Cadastre-se</button>
-                </div>
+            <div class="header__menu-titulo">
+                <h1>Programa<span>Mina</span></h1>
+            </div>
+            <div class="header__pesquisa">
+                <button class="bt_chama_modal">Cadastre-se</button>
+            </div>
 
             </div>
             <div class="slider">
@@ -50,11 +60,8 @@
             </div>
 
           
-        </header> 
-       
-        
-        
-         
+    </header> 
+          
     <section class="introducao">
         <p>Visto que existem diversas plataformas para auxiliar na conexão e na introdução nas comunidades de TI, foi observado que comumente as mulheres apresentam insatisfação com a falta de acolhimento oferecida pela área após a sua inserção. A predominância masculina nas comunidades e instituições de ensino também é um agravante da desigualdade de gênero no mercado de trabalho, fazendo com que mulheres não se sintam estimuladas a persistir nas carreiras almejadas. 	Logo, viu-se necessária a criação do sistema Programamina, que tem por objetivo oferecer uma rede de apoio às mulheres da área de TI, uma rede social onde elas possam trocar conhecimento e respaldo, fortalecendo a comunidade feminina na área de tecnologia, através de publicações e levantamento de dúvidas apresentados pelas usuárias.</p>
     </section>
@@ -96,15 +103,15 @@
             <form action="crud/logica_usuario.php" method="post" enctype="multipart/form-data"> 
                 <h2>Cadastrar:</h2>  
                 <label for="nome">Nome: </label>
-                <input type="text" required class="nome" id="nome" name="nome" placeholder="nome">
+                <input type="text" required class="nome" id="nome" name="nome" placeholder="Digite o seu nome">
                 <label for="profissao">Profissão: </label>
-                <input type="text" required class="profissao" id="profissao" name="profissao" placeholder="profissao">
+                <input type="text" required class="profissao" id="profissao" name="profissao" placeholder="Digite a sua profissão">
                 <label for="competencias">Competências: </label>
-                <input type="text" required class="competencias" id="competencias" name="competencias" placeholder="competencias">
+                <input type="text" required class="competencias" id="competencias" name="competencias" placeholder="Digite as suas competencias">
                 <label for="email">Email: </label>
-                <input type="email" required class="email" id="email" name="email" placeholder="email">
+                <input type="email" required class="email" id="email" name="email" placeholder="Digite o seu e-mail">
                 <label for="senha">Senha: </label>
-                <input type="password" required minlength="4" class="senha"  id="senha" name="senha" placeholder="senha">
+                <input type="password" required minlength="4" class="senha"  id="senha" name="senha" placeholder="Digite a uma senha de 4 digitos">
                 <input type="file" required  class="" id="file" name="file">
                 <input type="submit" class="bt-2" id="cadastrar" name="cadastrar" value="Cadastrar">           
             </form>

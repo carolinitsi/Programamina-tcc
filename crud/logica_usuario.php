@@ -165,6 +165,12 @@ if(isset($_REQUEST['cadastrar'])){
         $usuario=fazConsulta($query,'query',$array);
         if($usuario)
         {
+        //     $mensagem="Bem Vindo ".$nome." Seu cadastro foi concluído com sucesso";
+		//    $assunto="Cadastro Sistema";
+
+		//    $retorno= enviaEmail($email,$nome,$mensagem,$assunto);
+	
+		//    $_SESSION["msg"].= "Cadastro Efetuado com sucesso";
             header('location:../cadastro_concluido.html');
 
         }
@@ -189,12 +195,23 @@ if(isset($_REQUEST['cadastrar'])){
         $_SESSION['logado'] = 'logado';
         $_SESSION['id'] = $usuario['id_usuarios'];
         $_SESSION['email'] = $usuario['email'];
+        $_SESSION['user_nome'] = $usuario['nome'];
+        $_SESSION['user_image'] = $usuario['imagem'];
         $_SESSION['pesquisa'] = '';
+        $online = true;
+        $id = $usuario['id_usuarios'];
+        $query  =  "UPDATE usuarios
+                    SET user_online = ?
+                    WHERE id_usuarios= $id";
+        $array    = array($online);
+        $usuario  = fazConsulta($query,'query',$array);
+        
         // $data=date("d/m/Y h:i:s");
         // $mensagem.="Olá,você acaba de logar em ProgamaMina! Login foi realizado em ".$data;
-		// $assunto="checkin Sistema";
+		// $assunto="Checkin Sistema";
 		// $retorno= enviaEmail($email,$mensagem,$assunto);	
         header('location: ../php/inicio.php');
+        
     }
     else{
         $_SESSION['msg_login'] = "Ops! Usuário ou Senha Inválidos...";
@@ -205,6 +222,13 @@ if(isset($_REQUEST['cadastrar'])){
 #SAIR
 if(isset($_REQUEST['sair'])){
     session_destroy();
+    $online = false;
+    $id = $_SESSION['id'];
+    $query  =  "UPDATE usuarios
+                SET user_online = ?
+                WHERE id_usuarios= $id";
+    $array    = array($online);
+    $usuario  = fazConsulta($query,'query',$array);
     header('location:../index.html');
 }
 

@@ -28,9 +28,41 @@ function lightMode(){
     var lista_usuarias = document.querySelector(".lista_usuarias");
     var usuaria = document.querySelector(".usuaria");
     var header__logado = document.querySelector(".header__logado");
+    var container_chat = document.querySelector(".container_chat");
+    var container_input_mensagem = document.querySelector(".container_input_mensagem");
+    var container_conversas = document.querySelector(".container_conversas");
+    var conversas_bt = document.querySelector(".conversas_bt_nome");
+    var header__menu_buttons = document.querySelector(".header__menu-buttons");
+    var bt_home_link = [...document.querySelectorAll(".bt_home-link")];
+    var bt_sair = document.querySelector(".bt_sair");
+
+
 
     body.style.backgroundColor = "#f3f2ef";
     header__logado.style.background="linear-gradient(68.15deg,#262529, #4f454f 16.62%, #514551, #3a363a )";
+
+    if (bt_sair !== null){
+        bt_sair.style.filter = "brightness(0.5)";
+    } 
+
+    if (header__menu_buttons !== null){
+        header__menu_buttons.style.backgroundColor = "transparent";
+    } 
+
+    if (container_conversas !== null){
+        container_conversas.style.backgroundColor = "#ffff";
+    } 
+
+    if (conversas_bt !== null){
+        conversas_bt.style.color = "#0000";
+    } 
+
+    if (container_input_mensagem !== null){
+        container_input_mensagem.style.backgroundColor = "#ffff";
+    } 
+    if (container_chat !== null){
+        container_chat.style.backgroundColor = "#ffff";
+    } 
 
     if (lista_usuarias !== null){
         lista_usuarias.style.backgroundColor = "#ffff";
@@ -59,6 +91,12 @@ function lightMode(){
             box_edit_user_text[i].style.color = "#242320";
         }
     }
+
+    if (bt_home_link !== null){
+        for(var i = 0; i < bt_home_link.length;i++){
+            bt_home_link[i].style.filter = "brightness(0.5)";
+        }
+    } 
 }
 
 function darckmode(){
@@ -74,10 +112,43 @@ function darckmode(){
         var usuaria = document.querySelector(".usuaria");
         var header__logado =document.querySelector(".header__logado");
         var paragrafos = [...document.querySelectorAll(".p_post")];
+        var container_chat = document.querySelector(".container_chat");
+        var container_input_mensagem = document.querySelector(".container_input_mensagem");
+        var container_conversas = document.querySelector(".container_conversas");
+        var conversas_bt = document.querySelector(".conversas_bt_nome");
+        var header__menu_buttons = document.querySelector(".header__menu-buttons");
+        var bt_home_link = [...document.querySelectorAll(".bt_home-link")];
+        var bt_sair = document.querySelector(".bt_sair");
         
         header__logado.style.background="linear-gradient(68.15deg,rgb(26, 34, 42), rgb(30 38 46) 16.62%, rgb(26, 34, 42), rgb(35 36 37))";
-        
 
+        if (bt_sair !== null){
+            bt_sair.style.filter = "brightness(2)";
+        } 
+
+        if (bt_home_link !== null){
+            for(var i = 0; i < bt_home_link.length;i++){
+                bt_home_link[i].style.filter = "brightness(2)";
+            }
+        } 
+
+        if (header__menu_buttons !== null){
+            header__menu_buttons.style.backgroundColor = "rgb(26 34 42)";
+        } 
+
+        if (conversas_bt !== null){
+            conversas_bt.style.color = "#ffff";
+        } 
+        
+        if (container_conversas !== null){
+            container_conversas.style.backgroundColor = "rgb(26 34 42)";
+        } 
+        if (container_input_mensagem !== null){
+            container_input_mensagem.style.backgroundColor = "rgb(26 34 42)";
+        } 
+        if (container_chat !== null){
+            container_chat.style.backgroundColor = "rgb(26 34 42)";
+        } 
         if (lista_usuarias !== null){
             lista_usuarias.style.backgroundColor = "rgb(26 34 42)";
         } 
@@ -110,8 +181,8 @@ function darckmode(){
         legend[1].style.color = "#ffff";
         
 
-        for(var i = 0; i < box_edit_user_text.length;i++){
-            box_edit_user_text[i].style.color = "#ffff";
+        for(var y = 0; y < box_edit_user_text.length;y++){
+            box_edit_user_text[y].style.color = "#ffff";
         }
     }
 }

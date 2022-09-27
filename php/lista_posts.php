@@ -1,6 +1,10 @@
 <?php 
     $query = "SELECT * FROM posts , usuarios where posts.id_usuario = usuarios.id_usuarios ORDER BY posts.id_posts desc";
-    $usuarios = fazConsulta($query,'fetchAll');?>
+    $usuarios = fazConsulta($query,'fetchAll');
+
+    // $query_like = "SELECT COUNT(*)  FROM likes WHERE likes.id_post = posts.id_posts";
+    // $likes = fazConsulta($query_like,'fetchAll');
+    ?>
   <head>
     <link href="../css/emoji.scss" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -24,22 +28,26 @@
                 <div class="boxpostIndividual-main"> 
                     <div class="user">
                         <img src="../crud/imagens/<?php echo $usuario['imagem']; ?>" />
+                            <?php if($usuario['user_online'] === 1){?>
+                                <div class="online" title="Online"></div>
+                            <?php } ?> 
                         <div class="user-infos">
                             <p class="user-infos-nome"><?php echo $usuario['nome']; ?></p> 
                             <p class="user-infos-competencias"><?php echo $usuario['competencias']; ?></p> 
                             <p class="user-infos-data"><?php echo $usuario['data_post']; ?></p>
                         </div>
                     </div>
-                    <div class="boxpostIndividual-conteudo"> 
-                        <h3 class="boxpostIndividual__cabecalho--titulo"><?php echo $usuario['assunto']; ?></h3> 
-                        <p class="p_post"><?php echo $usuario['post']; ?> </p>
-                        <?php if(isset($usuario['imagem_post'])){?>
+                    <div class="boxpostIndividual-conteudo">
+                    <?php if(isset($usuario['imagem_post'])){?>
                         <img class="boxpostIndividual__cabecalho--imagem" src="../crud/imagens/<?php echo $usuario['imagem_post']; ?>"/>
-                        <?php } ?>
-                        <div class="box_like">    
-                            <input class="span_like" value="<?php echo $usuario['curtida']; ?>" id="span_like<?php echo $usuario['id_posts']; ?>"/>                    
-                            <button class="bt_like" id="like<?php echo $usuario['id_posts'];?>" name="" onclick="rigistraLike(<?php echo $usuario['id_posts']; ?>)" value=""></button>
-                        </div>
+                        <?php } ?> 
+                        <p class="p_post"><?php echo $usuario['post']; ?> </p>
+                        
+                        <!-- <div class="box_like">    
+                           
+                            <input class="span_like" value="<?php echo $likes ?>" id="span_like<?php echo $usuario['id_posts']; ?>"/>                    
+                            <button class="bt_like" id="like<?php echo $usuario['id_posts'];?>" name="" onclick="rigistraLike(<?php echo $usuario['id_posts']; ?>,<?php echo $_SESSION['id']; ?>)" value=""></button>
+                        </div> -->
 
                         <div class="boxpostIndividual-interacao">
                             <form action="../crud/logica_usuario.php" method="post">
@@ -51,7 +59,7 @@
                             </form>
                         </div>
 
-                        <button class="bt_comentarios" id="bt_exibe_comentarios" name="" onclick="carregar_comentarios(<?php echo $usuario['id_posts']; ?>);" value="<?php echo $usuario['id_posts']; ?>">Ver comentários</button>
+                        <button class="bt_comentarios" id="bt_exibe_comentarios<?php echo $usuario['id_posts']; ?>" name="" onclick="carregar_comentarios(<?php echo $usuario['id_posts']; ?>);" value="<?php echo $usuario['id_posts']; ?>">Ver comentários</button>
                         <div class="box-comentarios" id="exibe_comentarios<?php echo $usuario['id_posts']; ?>">
                         </div>
                     </div>

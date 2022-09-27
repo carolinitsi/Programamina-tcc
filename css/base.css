@@ -192,7 +192,7 @@ textarea:focus, input:focus {
     border: none;
     position: relative;
     cursor: pointer;
-    filter: brightness(2);
+    /* filter: brightness(2); */
     opacity: 80%;
 }
 .bt_sair-text{
@@ -260,8 +260,22 @@ textarea:focus, input:focus {
     font-size:20px;
 }
 
+.online{
+    background-color: #1abc9c;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 999;
+    left: 45px;
+    top: 48px;
+}
 @media(max-width:768px){
     h1{
         font-size: 60px;     
+    }
+    .wrapper{
+        width: 100%;
+        /* padding: 0px 30px; */
     }
 }

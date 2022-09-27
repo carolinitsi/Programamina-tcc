@@ -15,7 +15,7 @@
         <main  id="modal-edicao" class="wrapper">
                 
             <section id="secaoPrincipal" class="secaoPrincipal">
-                <article style="left:0px; position:absolute;">
+                <article style="left:0px; position:absolute; top:85px;">
                     <div class="usuaria">
                         <button class="usuaria_close" onclick="OpenModalPerfil()"></button>
                         <?php include_once("user.php");?>  
@@ -31,8 +31,38 @@
                 <div class="secaoPrincipal__post">
                         <form action="../crud/logica_usuario.php" method="POST" enctype="multipart/form-data">
                             <h2 class="secaoPrincipal__post-titulo">Faça uma publicação:</h2>
-                            <label for="assunto">Assunto: </label><input id="assunto" type="text" required class="secaoPrincipal__post--assunto" name="assunto" placeholder=" Palavra chave" >
-                            <textarea type="text" class="secaoPrincipal__post--post" name="post"placeholder=""></textarea>
+                            <label for="assunto">Categoria: </label>
+                            <select name="assunto" id="assunto" required="required">
+                            <option value="" selected></option>
+                            <optgroup label="Tecnologias">
+                              <option value="html">Html</option>
+                              <option value="Css">Css</option>
+                              <option value="Javascript">Javascript</option>
+                              <option value="Sql">Sql</option>
+                              <option value="Php">Php</option>
+                              <option value="Node">Node</option>
+                              <option value="Ruby">Ruby</option>
+                              <option value="C">C</option>
+                              <option value="C++">C++</option>
+                              <option value="React">React</option>
+                              <option value="Vue">Vue</option>
+                              <option value="Angular">Angular</option>
+                              <option value="Outro">Outro</option>
+                            </optgroup>
+                            <optgroup label="Áreas">
+                                <option value="Frontend">Frontend</option>
+                                <option value="Backend">Backend</option>
+                                <option value="Engenharia de software">Engenharia de software</option>
+                                <option value="Ciência de dados">Ciência de dados</option>
+                                <option value="Gestão de Tecnologia da Informação">Gestão de Tecnologia da Informação</option>
+                                <option value="Jogos Digitais">Jogos Digitais</option>
+                                <option value="Robótica">Robótica</option>
+                                <option value="Segurança da informação">Segurança da informação</option>
+                                <option value="Arquiteto de redes">Arquiteto de redes</option>
+                                <option value="Ciência de dados">Ciência de dados</option>
+                            </optgroup>
+                            </select>
+                            <textarea type="text" class="secaoPrincipal__post--post" name="post" placeholder="" required></textarea>
                             <label class="bt__file" for="bt__file"><img class="input_file_post-icon" src="../css/icones/file.png">                 
                                 <span class="">Foto</span>
                                 <img id="preview"/>
@@ -44,7 +74,11 @@
                 <?php include_once("lista_posts.php");?>
             </section>
         </main> 
-        
+
+          <!------------------------------------- MODAL EDITAR PERFIL ------------------------------------------------------------>
+
+         -->
+                
 
         <footer class="rodape">
             <!-- <div class="rodape__mensagem" id="secao-contato">
@@ -60,10 +94,6 @@
             
             <p class="copyright"> &copy; Copyright ProgramaMina 2022</p>
         </footer>
-
-        
-     
-
         <script src="ajax.js"></script>
         <script src="arquivo.js"></script>
         <script src="../Js/modal.js"></script>
