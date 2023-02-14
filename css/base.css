@@ -21,19 +21,35 @@
 @-webkit-keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; } 
-    }
-    @-moz-keyframes fadeIn {
-    0% { opacity: 0;}
-    100% { opacity: 1; }
-    }
-    @-o-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-    }
-    @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-    }
+}
+@-moz-keyframes fadeIn {
+0% { opacity: 0;}
+100% { opacity: 1; }
+}
+@-o-keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+@keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+@keyframes pulse {
+        0% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 #a25fa27c;
+        }
+    
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 10px #a96da97c;
+        }
+    
+        100% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 #d08ed07c;
+        }
+}
 html { 
     scroll-behavior: smooth;
 }
@@ -95,7 +111,7 @@ textarea:focus, input:focus {
     display: none;
 }
 #sucesso{
-    color: #0cd40c;
+    color: #1abc9c;
     font-weight: bold;
     display:flex;
     align-items: center;
@@ -117,6 +133,7 @@ textarea:focus, input:focus {
 
 .wrapper{
     max-width: 1300px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     /* flex-direction: row; */
@@ -125,6 +142,36 @@ textarea:focus, input:focus {
 }
 
 /*BOTÕES----------------------------------------------------------------------*/
+.pulse-button {
+    /* background: #a25fa2; */
+    background: linear-gradient(135deg, rgb(255, 78, 111) 0%, #7B387A 100%);
+
+	border-radius: 50%;
+    color:#ffff;
+	margin: 10px;
+	height: 50px;
+	width: 50px;
+
+    position: fixed;
+    border:none;
+    right: 50px;
+    bottom: 50px;
+    z-index: 99;
+    cursor: pointer;
+
+	box-shadow: 0 0 0 0 #a25fa2d4;
+	transform: scale(1);
+	animation: pulse 2s infinite ease-in;
+    font-size: 24px;
+    font-family: 'slick';
+    font-weight: bold;
+  }
+  .pulse-button:hover {
+    -webkit-animation: none;
+  }
+.bt_chama_modal,.publicar:hover{
+    cursor: pointer;
+}
 .bt_padrao{
     border-radius: 10px 20px 30px;
     border: none;
@@ -141,28 +188,40 @@ textarea:focus, input:focus {
     cursor: pointer;
 }
 
-.bt_editar_perfil{
-    background-color: #ded9e4d4;
+/* ul .botoes_lateral{
     display: flex;
-    border-radius: 12px;
-    padding: 5px;
-    justify-content: center;
-    width: 164px;
-    height: 25px;
+    flex-direction:column;
+    justify-content: space-evenly;
+    height: 100px;
+} */
+
+.bt_barra-lateral{
+    background-color: #f8f7f8;
+    display: flex;
+    border-radius: 0px;
+    padding: 5px 10px;
+    color: rgb(0, 0, 0);
+    /* justify-content: center; */
+    width: 100%;
+    height: 50px;
     border: none;
     position: relative;
     cursor: pointer;
-    margin: 5px;
     align-items: center;
-    margin: 0 auto;
+    margin: 10 auto;
+    /* position: relative; */
 }
-.bt_editar_perfil img{
-    width:20px;
+
+.bt_barra-lateral:hover{
+    color: #7B387A;
+    font-weight: bold;
 }
-#bt_editar_perfil:hover{
-    width: 30px;
-    height: 30px;
+
+.bt_barra-lateral img{
+    width:25px;
+    margin-right: 10px;
 }
+
 .bt_home{
     width: 20px;
     height:20px;
@@ -206,6 +265,7 @@ textarea:focus, input:focus {
 .bts_post{
     position: absolute;
     right: 25px;
+    z-index: 99;
 }
 .bt_editar_post{
     background-image: url("icones/editar.png ");    
@@ -221,7 +281,7 @@ textarea:focus, input:focus {
     background-image: url("icones/excluir-hover.png ");
     cursor: pointer;
 }
-.bt_padrao--grande{
+.modal_conteudo  input .bt_padrao--grande{
     margin-top: 2%;
     height: 50px;
     width: 100%;
@@ -241,9 +301,18 @@ textarea:focus, input:focus {
 }
 
 .secaoPrincipal{
-    width: 100%;
-    margin: 30px auto;
+    width: 60%;
+    margin: 80px auto;
+    position: relative;
     
+}
+.container_laterais{
+    width: 100%;
+    max-width:1300px;
+    display: flex;
+    justify-content: space-between;
+    position:fixed;
+    top: 70px;
 }
 .box_error{
     display: flex;
@@ -270,6 +339,13 @@ textarea:focus, input:focus {
     left: 45px;
     top: 48px;
 }
+.mais_opcoes{
+    position: absolute;
+}
+
+.none{
+    display: none;
+}
 @media(max-width:768px){
     h1{
         font-size: 60px;     
@@ -277,5 +353,9 @@ textarea:focus, input:focus {
     .wrapper{
         width: 100%;
         /* padding: 0px 30px; */
+    }
+    .secaoPrincipal{
+        width: 90%;
+        margin: 120px auto;
     }
 }

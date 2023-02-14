@@ -1,6 +1,7 @@
 <heade>
     <meta name="viewport" content="width=device-width">
 </heade>
+<boby>
     <?php 
         include("../php/header-session.php");
         include("../php/cabecalho.php");
@@ -17,49 +18,42 @@
         $conversas = fazConsulta($query,'fetchAll');
     ?>  
 
-    <article style="left:0px; position:absolute;">
-        <div class="usuaria">
-            <button class="usuaria_close" onclick="OpenModalPerfil()"></button>
-            <?php include_once("user.php");?>  
-        </div>
-    </article>
-    <article>
-        <div class="lista_usuarias">
-            <button class="usuaria_close" onclick="OpenModalUsers()"></button>
-            <?php include_once("users.php");?>  
-        </div>
-    </article>
     <div class="container_batepapo wrapper">
-
-    <div class="container_conversas"> 
-        <h2 style="height:50px;">Mensagens</h2>
-    <?php foreach($conversas as $conversa){?>
-        <div class="conversas">
-            <img src="../crud/imagens/<?php echo $conversa['imagem']; ?>" />     
-            <li><form method="" action="chat.php"><button class="conversas_bt" name="id" value="<?php echo $conversa['id_usuarios'];?>"><p class="conversas_bt_nome"><?php echo $conversa['nome']; ?></p></button></form></li>
-        </div>
-  
-        <?php }?>
-    </div>
-
-
-    <div class="container_chat" id="container_chat">
-        <div class="batepapo_chat" id="batepapo_chat">
-            <?php include("../php/chat_mensagens.php?id=$id_destinatario");?>
-        </div>
-        <div class="nova-mensagem_chat">
-            <form method="post" action="">
-                <div class="container_input_mensagem">
-                    <input type="text" class="input_mensagem" required placeholder="Digite uma mensagem..." name="input_mensagem">
+        <article style="top:85px;">
+            <div class="usuaria">
+                <button class="usuaria_close" onclick="OpenModalPerfil()"></button>
+                <?php include_once("user.php");?>  
+            </div>
+        </article>    
+        <div class="container_conversas"> 
+            <!-- <h2>Mensagens</h2> -->
+            <?php foreach($conversas as $conversa){?>
+                <div class="conversas">
+                    <img src="../crud/imagens/<?php echo $conversa['imagem']; ?>" />     
+                    <li><form method="" action="chat.php"><button class="conversas_bt" name="id" value="<?php echo $conversa['id_usuarios'];?>"><p class="conversas_bt_nome"><?php echo $conversa['nome']; ?></p></button></form></li>
                 </div>
-                <span>
-                    <input type="submit" value="Enviar" class="bt_enviar_msg" name="bt_enviar_msg">
-                    <input type="hidden" value="envMsg" class="bt_enviar_msg" name="env"/>
-                </span>
-            </form>
+            <?php }?>
+        </div>
+        <div class="container_chat" id="container_chat">
+            <div class="batepapo_chat" id="batepapo_chat">
+                <?php include("../php/chat_mensagens.php?id=$id_destinatario");?>
+            </div>
+            <div class="nova-mensagem_chat">
+                <form method="post" action="">
+                    <div class="container_input_mensagem">
+                        <input type="text" class="input_mensagem" required placeholder="Digite uma mensagem..." name="input_mensagem">
+                    </div>
+                    <span>
+                        <input type="submit" value="" class="bt_enviar_msg" name="bt_enviar_msg">
+                        <input type="hidden" value="envMsg" class="bt_enviar_msg" name="env"/>
+                    </span>
+                </form>
+            </div>
         </div>
     </div>
-</div>
+<script src="../Js/darkmode.js"></script>
+
+    </body>
 <?php
 
     if(isset($_POST['env']) && $_POST['env'] == "envMsg"){

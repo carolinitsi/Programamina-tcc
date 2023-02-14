@@ -13,6 +13,112 @@
     h2{
         color: #222122;
     }
+
+    /* MODAL PUBLICAÇÃO */
+
+    .inicio .modal_conteudo{
+        width: 400px;
+        height:616px;
+    }
+    .inicio .modal_conteudo h2, .cadastro .modal_conteudo h2 {
+        border-bottom: solid 1px #C7C3C3;
+        padding-bottom: 20px;
+        font-style: normal;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        margin-top: -9px;
+        margin-bottom: 20px;    
+    }
+    .form_publicar{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+    }
+    .secaoPrincipal__post--post{
+        border:transparent solid !important;
+        height: 250px !important;
+        border: solid 1px var(--cinza-padrão);
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 20px;
+    }
+    .secaoPrincipal__post--post::placeholder{
+        color: #C5C0C0;
+        font-size:24px;
+       
+    }
+    .secaoPrincipal__post-user{
+        display: flex;
+        align-items: center;
+    }
+    .secaoPrincipal__post-user img{
+        border-radius: 100%;
+    }
+
+    .bt__file{
+        display: flex;
+        align-items: center;
+        font-size:16px;
+        width: 70px;
+        justify-content: space-evenly;
+        padding:2px;
+        cursor: pointer;
+        margin:5px;
+    }
+    .bt__file:hover{
+        background-color: rgb(232, 228, 228);
+        border-radius: 10px;
+    }
+    .input_file_post{
+        display:none;
+    }
+    .input_file_post-icon{
+        width:30px;
+        height:30px;
+        position: relative;
+    }
+    
+    .secaoPrincipal__post #preview{
+        width:40px;
+        height:40px;
+        background-size: cover;
+        border-radius: 0px;
+        border: none;
+        position: absolute;
+        margin-top:8px;
+        margin-left:140px;
+    }
+    
+    .bt_publicar{
+        width: 350px;
+        height: 61px;
+        color:#ffff;
+        background-color: #DD4872;
+        border-radius: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 20px auto;
+        cursor: pointer;
+    }
+    .form_publicar select {
+        border: 1px solid #C5C0C0;
+        font-size: 15px;
+        padding: 0px 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .form_publicar select option:checked {
+        box-shadow: 0 0 150px #9b59b6 inset
+      }
+
+    .item{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .item:hover{
+        background-color: #c91c1c !important;
+    }
+
+
     .mostrar .modal_conteudo{
         animation: anima_modal .3s;
     }
@@ -23,7 +129,7 @@
         position: fixed;
         top:0px;
         left:0px;
-        z-index:2000;
+        z-index:9999;
         display:none;
         justify-content:center;
         align-items: center;   
@@ -32,28 +138,20 @@
         background: #ffff;
         padding: 30px;
         width: 60%;
-        max-width: 400px;
+        /* max-width: 400px; */
         height: 400px;
         min-width: 300px;
         border-radius: 20px;
         position: relative;
+        margin: 0 auto;
+        animation: anima_modal .3s;
     }
     .modal_conteudo .mensagem{
         width: 60%;
         margin-left: 10%;
         box-sizing: border-box;
     }
-    .modal_conteudo input{
-        display: flex;
-        height: 30px;
-        width: 100%;
-        font-family: 'Roboto Condensed', sans-serif;
-        letter-spacing: 2px;
-        color: #7a677a;
-        background-color: transparent;
-        border: none;
-        border-bottom: solid 1px #943892b4;
-    }
+   
     .modal_conteudo .bt-2{
         background: #943892b4;
         color: var(--branco-padrão);
@@ -78,10 +176,6 @@
     input[type=file]:hover{
         cursor: pointer;
     }
-    .modal_conteudo label{
-        color:var(--preto-padrão);
-        width: 100%;
-    }
     
     .modal_fundo_style.mostrar{
         display:flex;
@@ -102,5 +196,80 @@
         font-size: 15px;
         cursor: pointer;
     }
+
+    .modal_fundo-exclusão .modal_conteudo{
+        height: 100%;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+    }
+
+    .modal_fundo-exclusão .modal_conteudo h2{
+        font-family: 'Roboto Condensed';
+        font-weight: bold;
+    }
+
+    .modal_fundo-exclusão .buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+    }
+    .modal_fundo-exclusão button{
+        background:linear-gradient(135deg, rgb(255, 78, 111) 0%, #7B387A 100%);
+        border: none;
+        width: 100px;
+        border-radius: 10px;
+        font-size: 16px;
+        padding: 5px;
+        cursor: pointer;
+    }
+    .modal_fundo-exclusãoBt, .sim{
+        color: #ffff;
+    }
+    .modal_fundo-exclusãoBt, .cancelar{
+        background:transparent !important;
+        color:rgb(255, 78, 111);
+        font-weight: bold;
+    }
+    .modal_fundo-exclusãoBt, .cancelar:hover{
+        background-color:#ded9e4d4 !important;
+    }
     
-    
+
+    /* MODAL CADASTRO */
+    .cadastro .modal_conteudo .form_cadastrar .container{
+        display: flex !important;
+        width: 675px !important;
+        height:auto !important;
+        justify-content: space-around;
+    }
+    .cadastro .modal_conteudo .form_cadastrar .container div{
+        width: 50%;
+    }
+    .form_cadastrar{
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between;
+    }
+    .container p{
+        margin: 20px auto;
+    }
+    .container input{
+        border: none;
+        border-bottom: #943892 solid 1px;
+        width: 90%;
+    }
+    .container label{
+        color: #943892;
+    }
+    .bt_cadastrar{
+        width: 283px;
+        height: 38px;
+        color:#ffff;
+        background-color: #DD4872;
+        border-radius: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 20px auto;
+        cursor: pointer;
+        border: none;
+    }

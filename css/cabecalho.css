@@ -181,7 +181,8 @@
 }
 
 .header__logado{
-    background: linear-gradient(68.15deg,#262529, #4f454f   16.62%, #514551, #3a363a );
+    background:#5c295b;
+    /* background: linear-gradient(68.15deg,#262529, #4f454f   16.62%, #514551, #3a363a ); */
     height: 50px;
     width: 100vw;
     position: fixed;

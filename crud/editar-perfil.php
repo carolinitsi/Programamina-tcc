@@ -12,10 +12,10 @@
                 $usuarios = fazConsulta($query,'fetchAll');
                 foreach($usuarios as $usuario){          
 ?>  
-
+<body>
 <main id="secaoPrincipal">
     <div class="box-editar-usuario">
-    <img src="imagens/<?php echo $usuario['imagem']; ?>" class="imagem-perfil" width="100px"/>
+        <img src="imagens/<?php echo $usuario['imagem']; ?>" class="imagem-perfil" width="100px"/>
         <section class="box-editar-email" >
             <form action="logica_usuario.php" method="post" enctype="multipart/form-data">
                 <fieldset>
@@ -39,8 +39,6 @@
                     <button class="bt_editar-perfil" type="submit" name="editar_perfil" value="<?php echo $usuario['id_usuarios'];?>"> Salvar </button>
                 </fieldset> 
             </form> 
-
-
         </section>
         <section class="box-editar-senha">
             <form action="./logica_usuario.php" method="post"> 
@@ -68,18 +66,20 @@
             </span>
             
         </section>
-            <form class="box-editar-imagem"action="logica_usuario.php" method="post" enctype="multipart/form-data">
-                    <label class="label_edita_file" for="bt_edita_file"><img class="box-editar-file-icon" src="../css/icones/editar-imagem.png">                 
-                        <span class="">Editar foto</span>
-                    </label>
-                    <input type="file"   id="bt_edita_file" name="file" value="<?php echo $usuario['imagem']; ?>" onchange="previewimage()">
-                    <img id="preview"/>
-                    <button class="bt_salvar_foto" type="submit" name="editar_foto_perfil" value="<?php echo $usuario['id_usuarios'];?>"> Salvar </button>
-            </form>
-        
+        <form class="box-editar-imagem"action="logica_usuario.php" method="post" enctype="multipart/form-data">
+            <label class="label_edita_file" for="bt_edita_file"><img class="box-editar-file-icon" src="../css/icones/editar-imagem.png">                 
+                <span class="">Editar foto</span>
+            </label>
+            <input type="file"   id="bt_edita_file" name="file" value="<?php echo $usuario['imagem']; ?>" onchange="previewimage()">
+            <img id="preview"/>
+            <button class="bt_salvar_foto" type="submit" name="editar_foto_perfil" value="<?php echo $usuario['id_usuarios'];?>"> Salvar </button>
+        </form>     
     </div>
 </main>                                                         
-                <?php
-                }                   
-                ?>
+    <?php
+    }                   
+    ?>
+    <script src="../Js/darkmode.js"></script>
+</body>
+
            

@@ -22,7 +22,7 @@ function previewimage(){
 function previewimagePost(){
     console.log("Chama preview img post")
     var imagem = document.querySelector("#bt__file").files[0];
-    var preview = document.querySelector("#preview");
+    var preview = document.querySelector("#preview_post");
 
     preview.style.display = "block";
 

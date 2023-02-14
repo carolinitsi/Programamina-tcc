@@ -1,0 +1,68 @@
+.banco_talentos-container{
+    display:flex;
+    flex-direction: column;
+    margin-top:25px;
+}
+.banco_talentos-header{
+    background-image:url("./imagens/woman-gd417a8ba3_1920.jpg");
+    background-size: cover;
+    height:188px;
+    border-radius:20px 20px 0 0;
+    background-position: center;
+}
+.banco_talentos-headerColor{
+    background: linear-gradient(68.15deg,#241355, #60103f 16.62%, #50076d , #262223 );
+    background: linear-gradient(68.15deg,#241355, #60103f 16.62%, #50076d , #262223 );
+    z-index: 999;
+    height: 188px;
+    opacity: 64%;
+    border-radius:20px 20px 0 0;
+}
+.banco_talentos-pesquisar{
+    background-color: #fff;
+    height:72px;
+    border-radius:0 0 20px 20px;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+
+}
+.banco_talentos-pesquisar img{
+    width:35px;
+    height:35px;
+    border-radius: 100%;
+}
+.banco_talentos-pesquisar button{
+    background-color: #DD4872;
+    color:#ffff;
+    width:110px;
+    height:35px;
+    border-radius:20px;
+    border: none;
+    cursor: pointer;
+}
+.banco_talentos-pesquisar button:hover{
+    background-color: #a03553;
+}
+.banco_talentos-input{
+    background-color: #FAF6FF;
+    border-radius:20px;
+    height:35px;
+    width:500px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.banco_talentos-cards{
+    display: flex;
+    margin-top:20px;
+    width:100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.banco_card{
+    position:  relative !important;
+    margin-left:10px;
+    margin-right:5px;
+    margin-bottom: 10px;
+}

@@ -1,7 +1,5 @@
 <?php 
-    include("../php/barra_acessibilidade.php");
     session_start(); 
-
 ?>
 <heade>
     <meta name="viewport" content="width=device-width">
@@ -10,8 +8,7 @@
     <div class="header__logado-conteudo wrapper">
         <div class="box_pesquisa-input">
         <a href="../php/inicio.php"><img src="../css/imagens/logo.png" class="" width="200px" height="40px"/></a>
-
-            <input type="text" title="Pesquisar" required class="pesquisa-input" name="pesquisa" id="pesquisa" placeholder="Pesquisar" />
+            <input onkeypress=carregar_page_busca(<?php $_SESSION['pesquisa'] ?>) type="text" title="Pesquisar" required class="pesquisa-input" name="pesquisa" id="pesquisa" placeholder="Pesquisar" />
             <button type="submit" title="Pesquisar" class="pesquisa-bt" name="pesquisar" value="" onclick=carregar_page_busca(<?php $_SESSION['pesquisa'] ?>)></button>
         </div>
         <ul class="header__menu-buttons">
@@ -21,8 +18,5 @@
             <li class="header__menu-item" title="Sair" ><form action="../crud/logica_usuario.php" method="POST"> <button type="submit" class="bt_sair" id="sair" name="sair" value=""><a class="bt_sair-text">Sair</a></button></form></li>
         </ul>
     </div>
-</header>  
-<?php 
-    include("../php/barra_acessibilidade.php");
-
-?>
+</header> 
+<script src="ajax.js"></script>

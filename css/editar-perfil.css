@@ -314,3 +314,10 @@ form fieldset legend{
     height: 240px;
     border: 20px solid #ffff;
 }
+
+#preview_post{
+    display: none;
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+}

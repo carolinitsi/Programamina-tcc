@@ -1,5 +1,9 @@
 .dark{
     background-color:#1a222a !important;
     box-shadow:none !important;
-    color:#acaaa8 !important;
+    color:#fff !important;
+}
+
+.white{
+    filter:  invert(100%);
 }

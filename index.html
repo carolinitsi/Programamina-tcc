@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="cadastro">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <title>ProgramaMina</title>
         <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
         <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css"/>
-
         <link rel="stylesheet" type="text/css" href="css/base.css">
         <link rel="stylesheet" type="text/css" href="css/modal.css">
         <link rel="stylesheet" type="text/css" href="css/estilo-posts.css">
@@ -100,20 +99,41 @@
     <div id="modal_fundo" class="modal_fundo_style">
         <div class="modal_conteudo">
            <button class="fechar">X</button>
-            <form action="crud/logica_usuario.php" method="post" enctype="multipart/form-data"> 
-                <h2>Cadastrar:</h2>  
-                <label for="nome">Nome: </label>
-                <input type="text" required class="nome" id="nome" name="nome" placeholder="Digite o seu nome">
-                <label for="profissao">Profissão: </label>
-                <input type="text" required class="profissao" id="profissao" name="profissao" placeholder="Digite a sua profissão">
-                <label for="competencias">Competências: </label>
-                <input type="text" required class="competencias" id="competencias" name="competencias" placeholder="Digite as suas competencias">
-                <label for="email">Email: </label>
-                <input type="email" required class="email" id="email" name="email" placeholder="Digite o seu e-mail">
-                <label for="senha">Senha: </label>
-                <input type="password" required minlength="4" class="senha"  id="senha" name="senha" placeholder="Digite a uma senha de 4 digitos">
-                <input type="file" required  class="" id="file" name="file">
-                <input type="submit" class="bt-2" id="cadastrar" name="cadastrar" value="Cadastrar">           
+           <h2>Cadastre-se</h2>  
+            <form class="form_cadastrar" action="crud/logica_usuario.php" method="post" enctype="multipart/form-data"> 
+                <div class="container">
+                    <div>
+                        <p>
+                            <label for="nome">Nome: </label>
+                            <input type="text" required class="nome" id="nome" name="nome" placeholder="">
+                        </p>
+                        <p>
+                            <label for="email">Email: </label>
+                            <input type="email" required class="email" id="email" name="email" placeholder="">
+                        </p>
+                        <p>
+                            <label for="senha">Senha: </label>
+                            <input type="password" required minlength="4" class="senha"  id="senha" name="senha" placeholder="">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="profissao">Profissão: </label>
+                            <input type="text" required class="profissao" id="profissao" name="profissao" placeholder="">
+                        </p>
+                        <p>
+                            <label for="competencias">Competências: </label>
+                            <input type="text" required class="competencias" id="competencias" name="competencias" placeholder=""> 
+                        </p>
+                        <input type="file" required  class="" id="file" name="file">
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" id="checkbox" name="checkbox">
+                    <label for="checkbox">Deseja participar do nosso banco de talentos?</label>
+                </div>
+                
+                <input type="submit" class="bt_cadastrar" id="cadastrar" name="cadastrar" value="Cadastrar">           
             </form>
         </div>
     </div>

@@ -14,6 +14,8 @@ $(document).ready(function(){
 	function comeca(){
 		para();
 		lista();
+		lista_mensagens();
+		lista_online();
 	}
 
 	function lista(){
@@ -24,5 +26,27 @@ $(document).ready(function(){
 			}
 		})
 		timerI = setTimeout("lista()", 3000); //Tempo de espera para atualizar novamente
+		timerR = true;
+	}
+
+	function lista_mensagens(){
+		$.ajax({
+			url:"../php/mensagens.php",
+			success: function(textStatus){
+				$("#lista_mensagens").html(textStatus); //Mostra o resultado da página lista.php
+			}
+		})
+		timerI = setTimeout("lista_mensagens()", 3000); //Tempo de espera para atualizar novamente
+		timerR = true;
+	}
+
+	function lista_online(){
+		$.ajax({
+			url:"../php/users.php",
+			success: function(textStatus){
+				$("#lista_usuarias").html(textStatus); //Mostra o resultado da página lista.php
+			}
+		})
+		timerI = setTimeout("lista_online()", 3000); //Tempo de espera para atualizar novamente
 		timerR = true;
 	}

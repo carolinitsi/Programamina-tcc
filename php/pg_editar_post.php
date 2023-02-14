@@ -10,7 +10,7 @@
     }
 ?> 
 
-<body class="fadeIn">
+<body class="">
     <section class="conteudoEditar">
         <div class="edit_post-user">
             <?php if(isset($_SESSION['user_image'])){?>

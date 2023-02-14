@@ -1,6 +1,8 @@
 function OpenModalPerfil(){
     console.log("OpenModalPerfil");
     var modal = document.querySelector(".usuaria");
+    var secao = document.querySelector(".secaoPrincipal");
+    secao.classList.toggle("none");
     modal.classList.toggle("open_modal");
 }
 

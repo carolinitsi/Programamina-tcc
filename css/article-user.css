@@ -4,10 +4,10 @@ article .lista_usuarias{
     flex-wrap: wrap;
     width: 240px;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 0px 0px 20px 20px;
     position: absolute;
     right:0px;
-    top:80px;
+    top:40px;
     z-index: 99;
 }
 
@@ -104,8 +104,8 @@ article .usuaria{
 }
 
 .secaoPrincipal__infosUser-image{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     margin: 0 auto;
     border-radius: 100%;
     object-fit: cover;
@@ -127,6 +127,7 @@ article .usuaria{
     overflow-wrap: break-word;  
     word-wrap: break-word; 
     word-break: break-word;
+    z-index: 9999 !important;
 }
 
 .nome{
@@ -158,8 +159,93 @@ article .usuaria{
 .users_close{
     display: none;
 }
+.lista_usuarias-header{
+    text-align: right;
+    width: 120px;
+    height:40px;
+    padding:15px;
+    position: absolute;
+    border-radius: 20px 0px 0px 0px;
+    background-color: #ffff;
+    font-size:12px;
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.lista_usuarias-online{
+    right: 0px;
+    border-radius: 0px 20px 0px 0px;
+}
+.lista_usuarias-mensagens{
+    right: 120px;
+    border-radius: 20px 0px 0px 0px;
+    border-bottom: #a35da2 solid 3px;
+}
+.box__mensagens{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.box__mensagens li{
+    display: flex;
+    flex-direction: row;
+    justify-content:end;
+    width: 100%;
+    font-size:12px;
+    padding:5px 0px;
+    border-bottom: solid 1px #f3f2ef;
+    position: relative;
+}
+
+.box__mensagens img{
+    width:24px;
+    height: 24px;
+    border-radius:100%;
+    margin-right:0px;
+}
+.box__mensagens .online{
+    width:7px;
+    height:7px;
+    position:absolute;
+    top:80%;
+    transform:translateY(-50%);
+    left:192px;
+}
+div.lista_mensagens{
+    background-color: #ffff;
+    display: flex;
+    flex-wrap: wrap;
+    width: 240px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    position: absolute;
+    right:0px;
+    top:40px;
+    z-index: 99;
+}
+
+
+
+
 
 @media (max-device-width: 768px){
+    .lista_usuarias-header{
+       display: none;
+    }
+    div.lista_mensagens{
+        background-color: #ffff;
+        display: none;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 20px;
+        border-radius: 0px 0px 20px 20px;
+        position: absolute;
+        right:0px;
+        top:40px;
+        z-index: 99;
+    }
     .modal_perfil{
         display: block;
     }
@@ -191,10 +277,15 @@ article .usuaria{
     .open_modal{
         left:0px !important;
     }
+
+    .secaoPrincipal__infosUser{
+        z-index: 9999 !important;
+    }
+
     .secaoPrincipal__infosUser-image{
         width: 150px;
         height: 150px;
-        margin: 50px auto;
+        margin: 50px auto 0px auto;
     }
     .nome {
         font-size: 30px;

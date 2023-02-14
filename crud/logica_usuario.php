@@ -104,23 +104,22 @@ if(isset($_POST['editar_post'])){
     if($usuario)
     {
         header('location:../php/inicio.php');
+        die();
     }
     else
     {
         header('location:../php/inicio.php');
-        echo("Erro ao inserir");
+        die();
+        // echo("Erro ao inserir");
         
     }
 }
 
 #COMENTAR
 
-
-if(isset($_POST['comentar'])){
-   
     $id_usuario    = $_SESSION['id'];
-    $id_post       = $_POST['comentar'];
-    $comentario    = $_POST['comentario'];
+    $id_post       = $_GET['comentar'];
+    $comentario    = $_GET['comentario'];
     $data       = date("d/m/Y h:i:s");
     echo( $id_post);
     
@@ -136,7 +135,7 @@ if(isset($_POST['comentar'])){
         echo("Erro ao inserir");
         
     }
-}
+
 
 #CADASTRAR
 
@@ -148,7 +147,10 @@ if(isset($_REQUEST['cadastrar'])){
     $nome = $_REQUEST['nome']; 
     $profissao = $_REQUEST['profissao'];
     $competencias = $_REQUEST['competencias'];
+    $checkbox = $_REQUEST['checkbox'];
     $file  = upload($teste);
+
+    echo($checkbox);
  
     $query = "SELECT * FROM posts , usuarios where posts.id_usuario = usuarios.id_usuarios ORDER BY posts.id_posts desc";
     $usuarios = fazConsulta($query,'fetchAll');
@@ -160,8 +162,8 @@ if(isset($_REQUEST['cadastrar'])){
         } 
     }
     if($existe != true){
-        $query = "insert into usuarios (email, senha,imagem,nome,profissao,competencias) values (?,?,?,?,?,?)";
-        $array = array($email, $senhaEncriptada,$file,$nome, $profissao, $competencias);
+        $query = "insert into usuarios (email, senha,imagem,nome,profissao,competencias,banco_talentos) values (?,?,?,?,?,?,?)";
+        $array = array($email, $senhaEncriptada,$file,$nome, $profissao, $competencias,$checkbox);
         $usuario=fazConsulta($query,'query',$array);
         if($usuario)
         {
@@ -198,6 +200,7 @@ if(isset($_REQUEST['cadastrar'])){
         $_SESSION['user_nome'] = $usuario['nome'];
         $_SESSION['user_image'] = $usuario['imagem'];
         $_SESSION['pesquisa'] = '';
+        $_SESSION['time'] = time();
         $online = true;
         $id = $usuario['id_usuarios'];
         $query  =  "UPDATE usuarios
@@ -205,17 +208,20 @@ if(isset($_REQUEST['cadastrar'])){
                     WHERE id_usuarios= $id";
         $array    = array($online);
         $usuario  = fazConsulta($query,'query',$array);
+        echo($_SESSION['time']);
         
         // $data=date("d/m/Y h:i:s");
         // $mensagem.="Olá,você acaba de logar em ProgamaMina! Login foi realizado em ".$data;
 		// $assunto="Checkin Sistema";
 		// $retorno= enviaEmail($email,$mensagem,$assunto);	
-        header('location: ../php/inicio.php');
+
+        header('location:../php/inicio.php');
         
     }
     else{
         $_SESSION['msg_login'] = "Ops! Usuário ou Senha Inválidos...";
-        header('location: ../php/login.php');
+        header('location:../php/login.php');
+        die();
     }
 }
 
@@ -268,20 +274,20 @@ if (isset($_POST['alterar']))
            $array = array($email);
            $usuario=fazConsulta($query,'query',$array);
            $_SESSION['msg']= "<span id='sucesso'><img style='width: 20px;' src='../css/icones/sucesso.png'/> Senha alterada com sucesso!</span>";
-           header('location:editar-perfil.php');
+           header('location:../crud/editar-perfil.php');
+           die();
        }   
        else{
            $_SESSION['msg']= "<span id='error' style='color='red';'><img style='width: 20px;' src='../css/icones/error-.png'/> Senha atual não confere!</span>";
-           header('location:editar-perfil.php');
+           header('location:../crud/editar-perfil.php');
+           die();
        }                                                 
    }
 }
 
 #DELETAR
 
-if(isset($_REQUEST['deletar'])){
-
-    $id = $_REQUEST['deletar'];
+    $id = $_GET['deletar'];
     echo($id);
     $array=array($id);
     $query = "delete from posts where id_posts = ?";
@@ -290,13 +296,50 @@ if(isset($_REQUEST['deletar'])){
         {
             $_SESSION['msg']="Publicação deletada com Sucesso";
             header('location:../php/inicio.php');
+            die();
 
         }
         else
         {
             $_SESSION['msg']="Erro ao deletar";
             header('location: ../php/inicio.php');
+            die();
         }
     
+
+#DELETAR COMENTARIO
+
+    $id = $_GET['deletar_comentario'];
+    echo($id);
+    $array=array($id);
+    $query = "delete from comentarios where id_comentario = ?";
+    $usuario=fazConsulta($query,'query', $array);
+    if($usuario)
+        {
+            header('location:../php/inicio.php');
+            die();
+
+        }
+        else
+        {
+            $_SESSION['msg']="Erro ao deletar";
+            header('location: ../php/inicio.php');
+            die();
+        }
+    
+
+
+if(isset($_SESSION["time"]))
+{
+    if(time()-$_SESSION["time"] >60) 
+    {
+        session_unset();
+        session_destroy();
+        header("Location:../php/login.php");
+    }
+}
+else
+{
+    header("Location:login.php");
 }
 ?>

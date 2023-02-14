@@ -1,3 +1,4 @@
+
 var chamamodal = document.querySelector('.bt_chama_modal');
 chamamodal.addEventListener('click', function(){
         Modal('modal_fundo');
@@ -17,5 +18,6 @@ function fechaModal(modalID){
         modal.classList.remove('mostrar');
 }
 
-//----------------------
+
+
 
